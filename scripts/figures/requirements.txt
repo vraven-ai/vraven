@@ -1,0 +1,2 @@
+svgwrite>=1.4.3
+CairoSVG>=2.7.1

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 840" role="img" aria-labelledby="vraven-pipeline-title vraven-pipeline-desc">
+  <title id="vraven-pipeline-title">The VRAVEN causal decompilation pipeline</title>
+  <desc id="vraven-pipeline-desc">Eight ordered stages take a trained model through internal concept discovery, concept evolution, a causal mechanism graph, an executable decision programme, contrastive explanation, counterfactual proof, and a validity and coverage certificate.</desc>
+  <defs>
+    <style>
+      .card { fill: #ffffff; stroke: #123f68; stroke-width: 3; }
+      .flow { fill: none; stroke: #123f68; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .icon { fill: none; stroke: #123f68; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .teal { fill: #159b9a; stroke: #159b9a; }
+      .grey { fill: #a7b0b8; stroke: #87939e; }
+      .label { fill: #102f50; font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; text-anchor: middle; }
+    </style>
+    <marker id="vraven-pipeline-arrow" markerWidth="18" markerHeight="16" refX="16" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L18,8 L0,16 Z" fill="#123f68"/>
+    </marker>
+  </defs>
+
+  <rect width="1560" height="840" fill="#ffffff"/>
+
+  <!-- Connectors are drawn before cards so every route remains visually clean. -->
+  <path class="flow" marker-end="url(#vraven-pipeline-arrow)" d="M350 202 H414"/>
+  <path class="flow" marker-end="url(#vraven-pipeline-arrow)" d="M740 202 H804"/>
+  <path class="flow" marker-end="url(#vraven-pipeline-arrow)" d="M1130 202 H1194"/>
+  <path class="flow" marker-end="url(#vraven-pipeline-arrow)" d="M1360 352 V408 Q1360 420 1348 420 H212 Q196 420 196 436 V476"/>
+  <path class="flow" marker-end="url(#vraven-pipeline-arrow)" d="M350 636 H414"/>
+  <path class="flow" marker-end="url(#vraven-pipeline-arrow)" d="M740 636 H804"/>
+  <path class="flow" marker-end="url(#vraven-pipeline-arrow)" d="M1130 636 H1194"/>
+
+  <!-- Stage 1 -->
+  <g>
+    <rect class="card" x="40" y="52" width="310" height="300" rx="4"/>
+    <path class="icon" d="M137 112 C105 112 96 145 111 162 C91 180 103 214 126 216 C126 239 154 249 170 231 C184 249 214 238 214 214 C240 210 246 177 226 160 C241 135 215 105 190 116 C176 96 150 98 137 112 Z"/>
+    <path class="icon" d="M170 110 V224 M132 144 L170 174 L210 140 M142 204 L170 184 L202 208"/>
+    <circle class="teal" cx="132" cy="144" r="8"/><circle class="teal" cx="210" cy="140" r="8"/>
+    <circle class="teal" cx="142" cy="204" r="8"/><circle class="teal" cx="202" cy="208" r="8"/>
+    <circle fill="#ffffff" stroke="#123f68" stroke-width="6" cx="170" cy="174" r="8"/>
+    <text class="label" x="195" y="285"><tspan x="195">1. Trained</tspan><tspan x="195" dy="32">Model</tspan></text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g>
+    <rect class="card" x="430" y="52" width="310" height="300" rx="4"/>
+    <circle class="icon" cx="566" cy="160" r="67"/>
+    <path class="icon" d="M613 208 L662 257" stroke-width="18"/>
+    <rect class="grey" x="525" y="164" width="18" height="39" rx="2"/>
+    <rect class="teal" x="553" y="142" width="18" height="61" rx="2"/>
+    <rect fill="#123f68" x="581" y="118" width="18" height="85" rx="2"/>
+    <text class="label" x="585" y="285"><tspan x="585">2. Internal</tspan><tspan x="585" dy="32">Concept Discovery</tspan></text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g>
+    <rect class="card" x="820" y="52" width="310" height="300" rx="4"/>
+    <g transform="translate(930 159)">
+      <circle fill="#123f68" cx="0" cy="0" r="49"/><circle fill="#ffffff" cx="0" cy="0" r="20"/>
+      <path class="icon" d="M0 -68 V-48 M0 48 V68 M-68 0 H-48 M48 0 H68 M-48 -48 L-34 -34 M34 34 L48 48 M48 -48 L34 -34 M-34 34 L-48 48" stroke-width="16"/>
+    </g>
+    <g transform="translate(1025 193) scale(.72)">
+      <circle class="teal" cx="0" cy="0" r="49"/><circle fill="#ffffff" cx="0" cy="0" r="20"/>
+      <path fill="none" stroke="#159b9a" stroke-width="16" stroke-linecap="round" d="M0 -68 V-48 M0 48 V68 M-68 0 H-48 M48 0 H68 M-48 -48 L-34 -34 M34 34 L48 48 M48 -48 L34 -34 M-34 34 L-48 48"/>
+    </g>
+    <path class="icon" stroke="#6f7f8b" d="M956 102 C1000 75 1053 98 1064 139" marker-end="url(#vraven-pipeline-arrow)"/>
+    <text class="label" x="975" y="285"><tspan x="975">3. Concept</tspan><tspan x="975" dy="32">Evolution</tspan></text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g>
+    <rect class="card" x="1210" y="52" width="310" height="300" rx="4"/>
+    <circle fill="#123f68" cx="1365" cy="112" r="29"/>
+    <circle class="teal" cx="1299" cy="198" r="29"/>
+    <circle class="grey" cx="1365" cy="215" r="29"/>
+    <circle class="grey" cx="1431" cy="198" r="29"/>
+    <path class="icon" d="M1346 135 L1318 169 M1365 142 V177 M1384 135 L1412 169" marker-end="url(#vraven-pipeline-arrow)"/>
+    <text class="label" x="1365" y="285"><tspan x="1365">4. Causal</tspan><tspan x="1365" dy="32">Mechanism Graph</tspan></text>
+  </g>
+
+  <!-- Stage 5 -->
+  <g>
+    <rect class="card" x="40" y="486" width="310" height="300" rx="4"/>
+    <path class="icon" d="M128 532 H220 L258 570 V688 H128 Z M220 532 V570 H258"/>
+    <rect fill="#123f68" x="179" y="580" width="28" height="23" rx="2"/>
+    <path class="icon" d="M193 603 V626 M158 626 H228 M158 626 V650 M228 626 V650"/>
+    <rect fill="#123f68" x="142" y="650" width="32" height="22" rx="2"/>
+    <rect class="teal" x="212" y="650" width="32" height="22" rx="2"/>
+    <text class="label" x="195" y="719"><tspan x="195">5. Executable</tspan><tspan x="195" dy="30">Decision Programme</tspan></text>
+  </g>
+
+  <!-- Stage 6 -->
+  <g>
+    <rect class="card" x="430" y="486" width="310" height="300" rx="4"/>
+    <path fill="#a7b0b8" d="M590 596 H667 Q682 596 682 611 V658 Q682 673 667 673 H650 V696 L619 673 H590 Q575 673 575 658 V611 Q575 596 590 596 Z"/>
+    <path fill="#123f68" d="M500 550 H624 Q642 550 642 568 V626 Q642 644 624 644 H551 L518 672 V644 H500 Q482 644 482 626 V568 Q482 550 500 550 Z"/>
+    <path stroke="#ffffff" stroke-width="7" stroke-linecap="round" d="M512 579 H610 M512 599 H592 M512 619 H570"/>
+    <text class="label" x="585" y="719"><tspan x="585">6. Contrastive</tspan><tspan x="585" dy="30">Explanation</tspan></text>
+  </g>
+
+  <!-- Stage 7 -->
+  <g>
+    <rect class="card" x="820" y="486" width="310" height="300" rx="4"/>
+    <path class="icon" d="M975 548 V670 M900 570 H1050 M930 570 L891 641 M930 570 L969 641 M1020 570 L981 641 M1020 570 L1059 641"/>
+    <path fill="#159b9a" d="M868 641 H970 Q958 677 919 677 Q880 677 868 641 Z"/>
+    <path fill="#a7b0b8" d="M980 641 H1082 Q1070 677 1031 677 Q992 677 980 641 Z"/>
+    <path class="icon" d="M937 686 H1013"/>
+    <text class="label" x="975" y="719"><tspan x="975">7. Counterfactual</tspan><tspan x="975" dy="30">Proof</tspan></text>
+  </g>
+
+  <!-- Stage 8 -->
+  <g>
+    <rect class="card" x="1210" y="486" width="310" height="300" rx="4"/>
+    <rect class="icon" x="1305" y="518" width="120" height="132" rx="9"/>
+    <path class="icon" d="M1330 550 H1400 M1330 575 H1400 M1330 600 H1380"/>
+    <circle class="teal" cx="1405" cy="638" r="34"/>
+    <path fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" d="M1389 638 L1400 649 L1420 625"/>
+    <path fill="#123f68" d="M1390 667 L1382 697 L1404 687 L1418 706 L1425 670 Z"/>
+    <text class="label" x="1365" y="729"><tspan x="1365">8. Validity and</tspan><tspan x="1365" dy="30">Coverage Certificate</tspan></text>
+  </g>
+</svg>

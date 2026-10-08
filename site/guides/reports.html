@@ -1,0 +1,16 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Choose HTML, PDF or JSON output for a VRAVEN report."><title>Choose a report · VRAVEN</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="reports" data-root=".."><div class="page"><main id="content" class="content narrow guide">
+  <div class="eyebrow">Guide 06 · Output</div><h1>Create one report for one audience.</h1><p class="lede">VRAVEN deliberately writes one selected report per invocation. That keeps commands predictable and prevents stale output from being mistaken for current evidence.</p>
+  <table class="command-table"><thead><tr><th>Format</th><th>Best for</th></tr></thead><tbody><tr><td>html</td><td>Interactive local review and sharing as one self-contained page.</td></tr><tr><td>pdf</td><td>Archival review and fixed-layout submission. Browser-based PDF support must be available.</td></tr><tr><td>json</td><td>Automation, reproducibility checks and downstream analysis.</td></tr></tbody></table>
+  <h2>HTML</h2><pre><code>vraven demo --mode gradient \
+  --report-format html \
+  --output explanation.html</code></pre>
+  <h2>PDF</h2><pre><code>vraven demo --mode gradient \
+  --report-format pdf \
+  --output explanation.pdf</code></pre>
+  <h2>JSON</h2><pre><code>vraven demo --mode gradient \
+  --report-format json \
+  --output explanation.json</code></pre>
+  <div class="callout"><strong>Check before PDF export</strong>Run <code>vraven doctor</code>. Its <code>pdf_report_available</code> field tells you whether a supported browser is available for PDF rendering.</div>
+  <nav class="next"><a href="counterfactual.html">← Counterfactual</a><a href="commands.html">Next: command chooser →</a></nav>
+</main></div><script src="../assets/app.js"></script></body></html>

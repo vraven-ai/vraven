@@ -1,0 +1,28 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Package a PyTorch model and its configuration as a VRAVEN model bundle."><title>Use a model folder · VRAVEN</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="folder" data-root=".."><div class="page"><main id="content" class="content narrow guide">
+  <div class="eyebrow">Guide 02 · Model bundle</div><h1>Give VRAVEN one self-contained folder.</h1><p class="lede">A model file rarely explains how to rebuild the architecture or prepare its input. A VRAVEN bundle keeps that contract beside the weights.</p>
+  <h2>Arrange the files</h2><pre><code>my-model/
+├── model.pt
+├── input.npy
+└── architecture.py</code></pre>
+  <p><code>architecture.py</code> should expose the callable used to construct the model, for example <code>Classifier</code>. Keep every referenced path inside the bundle directory.</p>
+  <h2>Create the manifest</h2><pre><code>vraven bundle-init ./my-model \
+  --model model.pt \
+  --input input.npy \
+  --model-format state_dict \
+  --factory architecture:Classifier \
+  --task explain \
+  --preset standard \
+  --format html \
+  --output report.html</code></pre>
+  <p>This creates <code>my-model/vraven.json</code>. The manifest stores paths and defaults—not model data.</p>
+  <h2>Validate, then run</h2><pre><code>vraven bundle ./my-model
+vraven analyse ./my-model</code></pre>
+  <p>The second command loads the bundle defaults and writes <code>my-model/report.html</code>. Override one decision without rewriting the manifest:</p><pre><code>vraven analyse ./my-model \
+  --task adversarial \
+  --preset thorough \
+  --output adversarial-report.html</code></pre>
+  <div class="callout warning"><strong>Only have model.pt?</strong>A state dictionary does not contain the Python architecture. Supply a factory module. A full pickled model can be loaded with <code>--trusted-model</code>, but only when you trust its source because pickle loading can execute code.</div>
+  <div class="callout"><strong>Using a Git checkout?</strong>The public CLI remains the main interface. Repository scripts are reserved for contributors who need to regenerate the full research fixture. See <a href="source-checkout.html">Develop from source</a>.</div>
+  <nav class="next"><a href="getting-started.html">← Install</a><a href="explain.html">Next: explain one decision →</a></nav>
+</main></div><script src="../assets/app.js"></script></body></html>

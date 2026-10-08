@@ -1,0 +1,47 @@
+{
+  "model": "torchvision MobileNetV2",
+  "weights": "MobileNet_V2_Weights.IMAGENET1K_V2",
+  "predicted_class_index": 208,
+  "predicted_class": "Labrador retriever",
+  "confidence": 0.5262784957885742,
+  "top_five": [
+    {
+      "class": "Labrador retriever",
+      "probability": 0.5262784957885742
+    },
+    {
+      "class": "golden retriever",
+      "probability": 0.06994476914405823
+    },
+    {
+      "class": "Chesapeake Bay retriever",
+      "probability": 0.02836443856358528
+    },
+    {
+      "class": "Rhodesian ridgeback",
+      "probability": 0.02167908288538456
+    },
+    {
+      "class": "redbone",
+      "probability": 0.008108718320727348
+    }
+  ],
+  "layers_captured": 96,
+  "causal_interventions": 3,
+  "largest_intervention": {
+    "layer": "features.2.conv.0.1",
+    "baseline_target_score": 7.552353858947754,
+    "intervened_target_score": -0.5151699185371399,
+    "score_delta": 8.067523956298828,
+    "relative_delta": 1.0682131831972783
+  },
+  "image": {
+    "source": "https://commons.wikimedia.org/wiki/File:Labrador_Retriever_Adulto.JPG",
+    "author": "Miguel \u00c1ngel Mart\u00ednez Gonz\u00e1lez",
+    "license": "CC BY-SA 3.0"
+  },
+  "evidence": {
+    "input_attribution": "observational input-times-gradient",
+    "causal_interventions": "zero-ablation of the three selected layers"
+  }
+}

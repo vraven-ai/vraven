@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="vraven.decompiler.RobustnessProfileReport: Robust accuracy across an ε interval with uncertainty and attack attribution."><title>vraven.decompiler.RobustnessProfileReport · VRAVEN</title>
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="api" data-root=".."><div class="page"><main id="content" class="content guide">
+<a class="backlink" href="index.html">← Python API</a><div class="eyebrow">vraven.decompiler · class</div>
+<h1>RobustnessProfileReport</h1><div class="signature"><code>RobustnessProfileReport(model_name: &#x27;str&#x27;, protocol: &#x27;str&#x27;, norm: &#x27;str&#x27;, points: &#x27;list[RobustnessCurvePoint]&#x27;, robust_accuracy_auc: &#x27;float&#x27;, clean_normalised_robust_auc: &#x27;float&#x27;, endpoint_robust_accuracy: &#x27;float&#x27;, endpoint_wilson_95: &#x27;tuple[float, float]&#x27;, epsilon_at_50_percent_clean_retention: &#x27;float | None&#x27;, monotonicity_violations: &#x27;int&#x27;, robust_accuracy_auc_bootstrap_95: &#x27;tuple[float, float] | None&#x27; = None, simultaneous_dkw_95_half_width: &#x27;float | None&#x27; = None, limitations: &#x27;list[str]&#x27; = &lt;factory&gt;, metadata: &#x27;dict[str, Any]&#x27; = &lt;factory&gt;) -&gt; None</code></div>
+<section class="api-doc"><p>Robust accuracy across an ε interval with uncertainty and attack attribution.</p></section><h2>Usage</h2><pre><code>from vraven.decompiler import RobustnessProfileReport
+
+value = RobustnessProfileReport(...)</code></pre>
+<h2>Methods</h2><div class="api-members"><details><summary><code>save(self, path: &#x27;str | Path&#x27;) -&gt; &#x27;Path&#x27;</code></summary><p>Public method.</p></details><details><summary><code>to_dict(self) -&gt; &#x27;dict[str, Any]&#x27;</code></summary><p>Public method.</p></details><details><summary><code>write_html(self, path: &#x27;str | Path&#x27;) -&gt; &#x27;Path&#x27;</code></summary><p>Public method.</p></details></div>
+<div class="callout"><strong>Source of truth</strong>This page is generated from the checked-out public symbol, signature, and docstring. Pin the package version for reproducible work.</div>
+<div class="next"><a href="index.html">← API index</a><a href="../outputs/index.html">Output guide →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../assets/app.js"></script></body></html>

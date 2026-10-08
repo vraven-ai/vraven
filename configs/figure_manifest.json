@@ -1,0 +1,27 @@
+{
+  "project": "VRAVEN",
+  "expansion": "Visual Reasoning and Activation Visualisation for Explainable Networks",
+  "schema_version": "1.0",
+  "modes": ["publication_light", "interactive_dark"],
+  "formats": ["svg", "png", "pdf"],
+  "no_internal_heading": true,
+  "figures": [
+    {"key": "01_system_architecture", "category": "architecture"},
+    {"key": "02_runtime_dataflow", "category": "architecture"},
+    {"key": "03_package_architecture", "category": "architecture"},
+    {"key": "04_device_execution", "category": "architecture"},
+    {"key": "05_explanation_modes", "category": "methodology"},
+    {"key": "06_evidence_reconstruction", "category": "methodology"},
+    {"key": "07_reasoning_dna_pipeline", "category": "methodology"},
+    {"key": "08_latent_community_discovery", "category": "methodology"},
+    {"key": "09_training_monitoring", "category": "methodology"},
+    {"key": "10_architecture_adapters", "category": "methodology"},
+    {"key": "11_benchmark_protocol", "category": "validation"},
+    {"key": "12_causal_validation_loop", "category": "validation"},
+    {"key": "13_reliability_calibration", "category": "validation"},
+    {"key": "14_reasoning_drift", "category": "validation"},
+    {"key": "15_reproducibility_provenance", "category": "validation"},
+    {"key": "16_visual_contract", "category": "visual_system"},
+    {"key": "17_user_workflow", "category": "integration"}
+  ]
+}

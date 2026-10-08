@@ -1,0 +1,2977 @@
+{
+  "count": 22,
+  "commands": [
+    {
+      "name": "analyse",
+      "aliases": [
+        "analyze",
+        "quick"
+      ],
+      "help": "Run a common analysis with beginner-friendly defaults",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": null,
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": null,
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "-i",
+            "--input"
+          ],
+          "dest": "input",
+          "required": false,
+          "default": null,
+          "help": "Input tensor file; optional for a VRAVEN bundle directory"
+        },
+        {
+          "flags": [
+            "-t",
+            "--task"
+          ],
+          "dest": "task",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "-p",
+            "--preset"
+          ],
+          "dest": "preset",
+          "required": false,
+          "default": null,
+          "help": "Trade runtime for analysis depth"
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": "Optional class target"
+        },
+        {
+          "flags": [
+            "--target-class"
+          ],
+          "dest": "target_class",
+          "required": false,
+          "default": null,
+          "help": "Required for counterfactual search"
+        },
+        {
+          "flags": [
+            "--labels"
+          ],
+          "dest": "labels",
+          "required": false,
+          "default": null,
+          "help": "Optional label file for dataset/adversarial tasks"
+        },
+        {
+          "flags": [
+            "--class-names"
+          ],
+          "dest": "class_names",
+          "required": false,
+          "default": null,
+          "help": "Optional comma-separated class names"
+        },
+        {
+          "flags": [
+            "--format"
+          ],
+          "dest": "format",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "-o",
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Output path; a task-specific name is used by default"
+        }
+      ]
+    },
+    {
+      "name": "bundle",
+      "aliases": [],
+      "help": "Validate and describe a self-contained VRAVEN model bundle",
+      "options": [
+        {
+          "flags": [
+            "directory"
+          ],
+          "dest": "directory",
+          "required": true,
+          "default": null,
+          "help": "Directory containing vraven.json"
+        }
+      ]
+    },
+    {
+      "name": "bundle-init",
+      "aliases": [],
+      "help": "Create vraven.json for model and input files already in a directory",
+      "options": [
+        {
+          "flags": [
+            "directory"
+          ],
+          "dest": "directory",
+          "required": true,
+          "default": null,
+          "help": "Existing model-bundle directory"
+        },
+        {
+          "flags": [
+            "--model"
+          ],
+          "dest": "model",
+          "required": false,
+          "default": "model.pt",
+          "help": "Relative model filename"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": false,
+          "default": "sample.npy",
+          "help": "Relative input filename"
+        },
+        {
+          "flags": [
+            "--labels"
+          ],
+          "dest": "labels",
+          "required": false,
+          "default": null,
+          "help": "Optional relative label filename"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--task"
+          ],
+          "dest": "task",
+          "required": false,
+          "default": "explain",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--preset"
+          ],
+          "dest": "preset",
+          "required": false,
+          "default": "quick",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--format"
+          ],
+          "dest": "format",
+          "required": false,
+          "default": "html",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Optional relative default output path"
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": "Optional default class target"
+        },
+        {
+          "flags": [
+            "--target-class"
+          ],
+          "dest": "target_class",
+          "required": false,
+          "default": null,
+          "help": "Default destination class for counterfactual search"
+        },
+        {
+          "flags": [
+            "--class-names"
+          ],
+          "dest": "class_names",
+          "required": false,
+          "default": null,
+          "help": "Optional comma-separated class names"
+        }
+      ]
+    },
+    {
+      "name": "demo",
+      "aliases": [],
+      "help": "Run a deterministic local PyTorch demonstration",
+      "options": [
+        {
+          "flags": [
+            "--mode"
+          ],
+          "dest": "mode",
+          "required": false,
+          "default": "gradient",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--samples"
+          ],
+          "dest": "samples",
+          "required": false,
+          "default": 48,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": 1,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--report-format"
+          ],
+          "dest": "report_format",
+          "required": false,
+          "default": "html",
+          "help": "Write exactly one report in the selected format (default: html)"
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Single report destination; its extension must match --report-format"
+        },
+        {
+          "flags": [
+            "--output-dir"
+          ],
+          "dest": "output_dir",
+          "required": false,
+          "default": null,
+          "help": "Compatibility option: place the single report in this directory"
+        }
+      ]
+    },
+    {
+      "name": "explain",
+      "aliases": [],
+      "help": "Explain one saved PyTorch model invocation and write one report",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Model input as .npy, .npz or a trusted tensor-only .pt/.pth file"
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": "Target class index"
+        },
+        {
+          "flags": [
+            "--mode"
+          ],
+          "dest": "mode",
+          "required": false,
+          "default": "gradient",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--class-names"
+          ],
+          "dest": "class_names",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated class labels"
+        },
+        {
+          "flags": [
+            "--module-policy"
+          ],
+          "dest": "module_policy",
+          "required": false,
+          "default": "leaf",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--include-module-types"
+          ],
+          "dest": "include_module_types",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated module types"
+        },
+        {
+          "flags": [
+            "--exclude-module-types"
+          ],
+          "dest": "exclude_module_types",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated module types"
+        },
+        {
+          "flags": [
+            "--include-name-patterns"
+          ],
+          "dest": "include_name_patterns",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated layer-name patterns"
+        },
+        {
+          "flags": [
+            "--exclude-name-patterns"
+          ],
+          "dest": "exclude_name_patterns",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated layer-name patterns"
+        },
+        {
+          "flags": [
+            "--max-layers"
+          ],
+          "dest": "max_layers",
+          "required": false,
+          "default": 256,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-units"
+          ],
+          "dest": "max_units",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--representation-size"
+          ],
+          "dest": "representation_size",
+          "required": false,
+          "default": 64,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-attention-tokens"
+          ],
+          "dest": "max_attention_tokens",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--histogram-bins"
+          ],
+          "dest": "histogram_bins",
+          "required": false,
+          "default": 32,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-auto-move-inputs"
+          ],
+          "dest": "no_auto_move_inputs",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-entropy"
+          ],
+          "dest": "no_entropy",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-representations"
+          ],
+          "dest": "no_representations",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-unit-profiles"
+          ],
+          "dest": "no_unit_profiles",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-attention"
+          ],
+          "dest": "no_attention",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-input-attribution"
+          ],
+          "dest": "no_input_attribution",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--capture-full-tensors"
+          ],
+          "dest": "capture_full_tensors",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-timing"
+          ],
+          "dest": "no_timing",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--causal-top-k"
+          ],
+          "dest": "causal_top_k",
+          "required": false,
+          "default": 3,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--causal-strategy"
+          ],
+          "dest": "causal_strategy",
+          "required": false,
+          "default": "zero",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--causal-scale"
+          ],
+          "dest": "causal_scale",
+          "required": false,
+          "default": 0.0,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--seed"
+          ],
+          "dest": "seed",
+          "required": false,
+          "default": 17,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output-path"
+          ],
+          "dest": "output_path",
+          "required": false,
+          "default": null,
+          "help": "Dot path to logits in structured output"
+        },
+        {
+          "flags": [
+            "--non-strict-capture"
+          ],
+          "dest": "non_strict_capture",
+          "required": false,
+          "default": false,
+          "help": "Continue when an individual capture operation is unsupported"
+        },
+        {
+          "flags": [
+            "--report-format"
+          ],
+          "dest": "report_format",
+          "required": false,
+          "default": "html",
+          "help": "Write exactly one report in the selected format (default: html)"
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Single report destination; its extension must match --report-format"
+        },
+        {
+          "flags": [
+            "--output-dir"
+          ],
+          "dest": "output_dir",
+          "required": false,
+          "default": null,
+          "help": "Compatibility option: place the single report in this directory"
+        }
+      ]
+    },
+    {
+      "name": "adversarial",
+      "aliases": [],
+      "help": "Run finite-budget empirical adversarial stress testing",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Input tensor file"
+        },
+        {
+          "flags": [
+            "--labels"
+          ],
+          "dest": "labels",
+          "required": false,
+          "default": null,
+          "help": "Optional labels for the input batch"
+        },
+        {
+          "flags": [
+            "--scope"
+          ],
+          "dest": "scope",
+          "required": false,
+          "default": "sample",
+          "help": "Audit one sample, fixed-epsilon batch accuracy, or an epsilon robustness curve"
+        },
+        {
+          "flags": [
+            "--sample-index"
+          ],
+          "dest": "sample_index",
+          "required": false,
+          "default": 0,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": "Decision target; defaults to label or prediction"
+        },
+        {
+          "flags": [
+            "--model-name"
+          ],
+          "dest": "model_name",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output-path"
+          ],
+          "dest": "output_path",
+          "required": false,
+          "default": null,
+          "help": "Dot path to logits in structured output"
+        },
+        {
+          "flags": [
+            "--attacks"
+          ],
+          "dest": "attacks",
+          "required": false,
+          "default": "quick",
+          "help": "quick, full, or comma-separated attacks such as fgsm,pgd_linf,deepfool"
+        },
+        {
+          "flags": [
+            "--epsilon-grid"
+          ],
+          "dest": "epsilon_grid",
+          "required": false,
+          "default": "0.01,0.05,0.1",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--epsilon"
+          ],
+          "dest": "epsilon",
+          "required": false,
+          "default": 0.1,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--protocol"
+          ],
+          "dest": "protocol",
+          "required": false,
+          "default": "vraven_ensemble_lite",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-samples"
+          ],
+          "dest": "max_samples",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--sampling"
+          ],
+          "dest": "sampling",
+          "required": false,
+          "default": "head",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--steps"
+          ],
+          "dest": "steps",
+          "required": false,
+          "default": 10,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--restarts"
+          ],
+          "dest": "restarts",
+          "required": false,
+          "default": 1,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--step-size"
+          ],
+          "dest": "step_size",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--clip-min"
+          ],
+          "dest": "clip_min",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--clip-max"
+          ],
+          "dest": "clip_max",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--seed"
+          ],
+          "dest": "seed",
+          "required": false,
+          "default": 24032026,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--deepfool-iters"
+          ],
+          "dest": "deepfool_iters",
+          "required": false,
+          "default": 40,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--square-queries"
+          ],
+          "dest": "square_queries",
+          "required": false,
+          "default": 80,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--fab-iters"
+          ],
+          "dest": "fab_iters",
+          "required": false,
+          "default": 20,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--fab-restarts"
+          ],
+          "dest": "fab_restarts",
+          "required": false,
+          "default": 2,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--target-classes"
+          ],
+          "dest": "target_classes",
+          "required": false,
+          "default": 3,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--format"
+          ],
+          "dest": "format",
+          "required": false,
+          "default": "json",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Output path; defaults to the selected format"
+        }
+      ]
+    },
+    {
+      "name": "counterfactual",
+      "aliases": [],
+      "help": "Search for a bounded continuous-input counterfactual",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Input tensor file"
+        },
+        {
+          "flags": [
+            "--sample-index"
+          ],
+          "dest": "sample_index",
+          "required": false,
+          "default": 0,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--target-class"
+          ],
+          "dest": "target_class",
+          "required": true,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--steps"
+          ],
+          "dest": "steps",
+          "required": false,
+          "default": 100,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--learning-rate"
+          ],
+          "dest": "learning_rate",
+          "required": false,
+          "default": 0.05,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--l2-weight"
+          ],
+          "dest": "l2_weight",
+          "required": false,
+          "default": 0.01,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-linf"
+          ],
+          "dest": "max_linf",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--clamp-min"
+          ],
+          "dest": "clamp_min",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--clamp-max"
+          ],
+          "dest": "clamp_max",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--top-changes"
+          ],
+          "dest": "top_changes",
+          "required": false,
+          "default": 20,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "vraven_counterfactual.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "stability",
+      "aliases": [],
+      "help": "Measure score stability under controlled input perturbations",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Input tensor file"
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--levels"
+          ],
+          "dest": "levels",
+          "required": false,
+          "default": "0,0.2,0.4,0.6,0.8,1",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--kinds"
+          ],
+          "dest": "kinds",
+          "required": false,
+          "default": "noise,feature_mask,shuffle",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--repeats"
+          ],
+          "dest": "repeats",
+          "required": false,
+          "default": 5,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--seed"
+          ],
+          "dest": "seed",
+          "required": false,
+          "default": 17,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-auto-move-inputs"
+          ],
+          "dest": "no_auto_move_inputs",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "vraven_stability.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "lrp",
+      "aliases": [],
+      "help": "Run epsilon-rule Layer-wise Relevance Propagation",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Input tensor file"
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--epsilon"
+          ],
+          "dest": "epsilon",
+          "required": false,
+          "default": 1e-06,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-auto-move-inputs"
+          ],
+          "dest": "no_auto_move_inputs",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "vraven_lrp.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "certify",
+      "aliases": [],
+      "help": "Run formal local L-infinity verification for supported operators",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Input tensor file"
+        },
+        {
+          "flags": [
+            "--sample-index"
+          ],
+          "dest": "sample_index",
+          "required": false,
+          "default": 0,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--model-name"
+          ],
+          "dest": "model_name",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--epsilon-grid"
+          ],
+          "dest": "epsilon_grid",
+          "required": false,
+          "default": "0,0.001,0.005,0.01,0.05,0.1",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--clip-min"
+          ],
+          "dest": "clip_min",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--clip-max"
+          ],
+          "dest": "clip_max",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--radius-search-steps"
+          ],
+          "dest": "radius_search_steps",
+          "required": false,
+          "default": 24,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--format"
+          ],
+          "dest": "format",
+          "required": false,
+          "default": "json",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Output path; defaults to the selected format"
+        }
+      ]
+    },
+    {
+      "name": "dataset",
+      "aliases": [],
+      "help": "Explain a bounded sample cohort and build a reasoning-fingerprint atlas",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Batched tensor input file"
+        },
+        {
+          "flags": [
+            "--labels"
+          ],
+          "dest": "labels",
+          "required": false,
+          "default": null,
+          "help": "Optional per-sample target labels"
+        },
+        {
+          "flags": [
+            "--mode"
+          ],
+          "dest": "mode",
+          "required": false,
+          "default": "fast",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--class-names"
+          ],
+          "dest": "class_names",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated class labels"
+        },
+        {
+          "flags": [
+            "--max-samples"
+          ],
+          "dest": "max_samples",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--fingerprint-dimensions"
+          ],
+          "dest": "fingerprint_dimensions",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-layers"
+          ],
+          "dest": "max_layers",
+          "required": false,
+          "default": 256,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-units"
+          ],
+          "dest": "max_units",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "vraven_dataset_atlas.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "compare",
+      "aliases": [],
+      "help": "Compare two saved models on the same bounded sample cohort",
+      "options": [
+        {
+          "flags": [
+            "model_a"
+          ],
+          "dest": "model_a",
+          "required": true,
+          "default": null,
+          "help": "Left model file"
+        },
+        {
+          "flags": [
+            "model_b"
+          ],
+          "dest": "model_b",
+          "required": true,
+          "default": null,
+          "help": "Right model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--model-a-factory"
+          ],
+          "dest": "model_a_factory",
+          "required": false,
+          "default": null,
+          "help": "Optional factory override for model A"
+        },
+        {
+          "flags": [
+            "--model-b-factory"
+          ],
+          "dest": "model_b_factory",
+          "required": false,
+          "default": null,
+          "help": "Optional factory override for model B"
+        },
+        {
+          "flags": [
+            "--model-a-factory-kwargs"
+          ],
+          "dest": "model_a_factory_kwargs",
+          "required": false,
+          "default": null,
+          "help": "Optional JSON kwargs for model A"
+        },
+        {
+          "flags": [
+            "--model-b-factory-kwargs"
+          ],
+          "dest": "model_b_factory_kwargs",
+          "required": false,
+          "default": null,
+          "help": "Optional JSON kwargs for model B"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Batched tensor input file"
+        },
+        {
+          "flags": [
+            "--labels"
+          ],
+          "dest": "labels",
+          "required": false,
+          "default": null,
+          "help": "Optional per-sample target labels"
+        },
+        {
+          "flags": [
+            "--mode"
+          ],
+          "dest": "mode",
+          "required": false,
+          "default": "fast",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--class-names"
+          ],
+          "dest": "class_names",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated class labels"
+        },
+        {
+          "flags": [
+            "--left-name"
+          ],
+          "dest": "left_name",
+          "required": false,
+          "default": "model_a",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--right-name"
+          ],
+          "dest": "right_name",
+          "required": false,
+          "default": "model_b",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-samples"
+          ],
+          "dest": "max_samples",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--fingerprint-dimensions"
+          ],
+          "dest": "fingerprint_dimensions",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-layers"
+          ],
+          "dest": "max_layers",
+          "required": false,
+          "default": 256,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-units"
+          ],
+          "dest": "max_units",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "vraven_model_comparison.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "evolution",
+      "aliases": [],
+      "help": "Track one input through two or more ordered model checkpoints",
+      "options": [
+        {
+          "flags": [
+            "models"
+          ],
+          "dest": "models",
+          "required": true,
+          "default": null,
+          "help": "Ordered checkpoint model files"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Input tensor file"
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--checkpoint-names"
+          ],
+          "dest": "checkpoint_names",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated checkpoint names"
+        },
+        {
+          "flags": [
+            "--mode"
+          ],
+          "dest": "mode",
+          "required": false,
+          "default": "fast",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--class-names"
+          ],
+          "dest": "class_names",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated class labels"
+        },
+        {
+          "flags": [
+            "--fingerprint-dimensions"
+          ],
+          "dest": "fingerprint_dimensions",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-layers"
+          ],
+          "dest": "max_layers",
+          "required": false,
+          "default": 256,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--max-units"
+          ],
+          "dest": "max_units",
+          "required": false,
+          "default": 128,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "vraven_checkpoint_evolution.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "anatomy",
+      "aliases": [],
+      "help": "Inspect measured local anatomy of Linear layers for one sample",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Input tensor file"
+        },
+        {
+          "flags": [
+            "--sample-index"
+          ],
+          "dest": "sample_index",
+          "required": false,
+          "default": 0,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--layers"
+          ],
+          "dest": "layers",
+          "required": false,
+          "default": null,
+          "help": "Optional comma-separated Linear layer names"
+        },
+        {
+          "flags": [
+            "--top-units"
+          ],
+          "dest": "top_units",
+          "required": false,
+          "default": 12,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "vraven_internal_anatomy.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "decompile-demo",
+      "aliases": [],
+      "help": "Run a deterministic compiler-assisted causal decompilation demonstration",
+      "options": [
+        {
+          "flags": [
+            "--samples"
+          ],
+          "dest": "samples",
+          "required": false,
+          "default": 48,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--focus-index"
+          ],
+          "dest": "focus_index",
+          "required": false,
+          "default": 0,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--profile"
+          ],
+          "dest": "profile",
+          "required": false,
+          "default": "quick",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--report-format"
+          ],
+          "dest": "report_format",
+          "required": false,
+          "default": "html",
+          "help": "Write exactly one report in the selected format (default: html)"
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Single report destination; its extension must match --report-format"
+        },
+        {
+          "flags": [
+            "--output-dir"
+          ],
+          "dest": "output_dir",
+          "required": false,
+          "default": null,
+          "help": "Compatibility option: place the single report in this directory"
+        }
+      ]
+    },
+    {
+      "name": "capture",
+      "aliases": [],
+      "help": "Compile a PyTorch model into the architecture-neutral VRAVEN Mechanism IR",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--input"
+          ],
+          "dest": "input",
+          "required": true,
+          "default": null,
+          "help": "Example .npy, .npz or trusted tensor .pt input"
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": "mechanism_ir.json",
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "reverse",
+      "aliases": [],
+      "help": "Recover concepts, causal mechanism, executable programme and Decision Proof",
+      "options": [
+        {
+          "flags": [
+            "model"
+          ],
+          "dest": "model",
+          "required": true,
+          "default": null,
+          "help": "PyTorch model file"
+        },
+        {
+          "flags": [
+            "--model-format"
+          ],
+          "dest": "model_format",
+          "required": false,
+          "default": "state_dict",
+          "help": "Model storage format. VRAVEN instrumentation supports state_dict and trusted pickle models; TorchScript can be loaded but cannot expose PyTorch hooks."
+        },
+        {
+          "flags": [
+            "--model-factory",
+            "--factory"
+          ],
+          "dest": "model_factory",
+          "required": false,
+          "default": null,
+          "help": "Import path such as my_project.models:Classifier"
+        },
+        {
+          "flags": [
+            "--factory-kwargs"
+          ],
+          "dest": "factory_kwargs",
+          "required": false,
+          "default": "{}",
+          "help": "JSON object passed to the model factory"
+        },
+        {
+          "flags": [
+            "--state-dict-key"
+          ],
+          "dest": "state_dict_key",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--strip-prefix"
+          ],
+          "dest": "strip_prefix",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--device"
+          ],
+          "dest": "device",
+          "required": false,
+          "default": "cpu",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--non-strict"
+          ],
+          "dest": "non_strict",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--trusted-model"
+          ],
+          "dest": "trusted_model",
+          "required": false,
+          "default": false,
+          "help": "Allow Python-pickle model loading"
+        },
+        {
+          "flags": [
+            "--reference"
+          ],
+          "dest": "reference",
+          "required": true,
+          "default": null,
+          "help": "Reference .npy, .npz or trusted tensor .pt data"
+        },
+        {
+          "flags": [
+            "--labels"
+          ],
+          "dest": "labels",
+          "required": false,
+          "default": null,
+          "help": "Optional .npy, .npz, .csv or tensor .pt labels"
+        },
+        {
+          "flags": [
+            "--focus-index"
+          ],
+          "dest": "focus_index",
+          "required": false,
+          "default": 0,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--target"
+          ],
+          "dest": "target",
+          "required": false,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--class-names"
+          ],
+          "dest": "class_names",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated class labels"
+        },
+        {
+          "flags": [
+            "--input-groups"
+          ],
+          "dest": "input_groups",
+          "required": false,
+          "default": null,
+          "help": "JSON file mapping human group names to feature indices"
+        },
+        {
+          "flags": [
+            "--validated-input-groups"
+          ],
+          "dest": "validated_input_groups",
+          "required": false,
+          "default": null,
+          "help": "Comma-separated group names whose semantic identity is independently established. Use only for planted mechanisms or externally reviewed domain ontologies; ordinary post-hoc associations must not be upgraded."
+        },
+        {
+          "flags": [
+            "--output-path"
+          ],
+          "dest": "output_path",
+          "required": false,
+          "default": null,
+          "help": "Dot path to logits in a structured model output"
+        },
+        {
+          "flags": [
+            "--profile"
+          ],
+          "dest": "profile",
+          "required": false,
+          "default": "standard",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-counterfactual"
+          ],
+          "dest": "no_counterfactual",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--no-profiler"
+          ],
+          "dest": "no_profiler",
+          "required": false,
+          "default": false,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--report-format"
+          ],
+          "dest": "report_format",
+          "required": false,
+          "default": "html",
+          "help": "Write exactly one report in the selected format (default: html)"
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": false,
+          "default": null,
+          "help": "Single report destination; its extension must match --report-format"
+        },
+        {
+          "flags": [
+            "--output-dir"
+          ],
+          "dest": "output_dir",
+          "required": false,
+          "default": null,
+          "help": "Compatibility option: place the single report in this directory"
+        }
+      ]
+    },
+    {
+      "name": "inspect",
+      "aliases": [],
+      "help": "Inspect a saved VRAVEN trace",
+      "options": [
+        {
+          "flags": [
+            "trace"
+          ],
+          "dest": "trace",
+          "required": true,
+          "default": null,
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "render",
+      "aliases": [],
+      "help": "Render one standalone figure from a trace",
+      "options": [
+        {
+          "flags": [
+            "trace"
+          ],
+          "dest": "trace",
+          "required": true,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--visual"
+          ],
+          "dest": "visual",
+          "required": false,
+          "default": "reasoning_dna",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--mode"
+          ],
+          "dest": "mode",
+          "required": false,
+          "default": "publication_light",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--output"
+          ],
+          "dest": "output",
+          "required": true,
+          "default": null,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--preset"
+          ],
+          "dest": "preset",
+          "required": false,
+          "default": "double_column",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--dpi"
+          ],
+          "dest": "dpi",
+          "required": false,
+          "default": 300,
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "raven",
+      "aliases": [],
+      "help": "Display the optional blinking or dancing terminal raven",
+      "options": [
+        {
+          "flags": [
+            "--style"
+          ],
+          "dest": "style",
+          "required": false,
+          "default": "blink",
+          "help": ""
+        },
+        {
+          "flags": [
+            "--cycles"
+          ],
+          "dest": "cycles",
+          "required": false,
+          "default": 2,
+          "help": ""
+        },
+        {
+          "flags": [
+            "--delay"
+          ],
+          "dest": "delay",
+          "required": false,
+          "default": 0.18,
+          "help": ""
+        }
+      ]
+    },
+    {
+      "name": "doctor",
+      "aliases": [],
+      "help": "Report the local VRAVEN and PyTorch capabilities",
+      "options": []
+    },
+    {
+      "name": "features",
+      "aliases": [],
+      "help": "List supported commands, modes, formats and visualisations",
+      "options": []
+    }
+  ]
+}

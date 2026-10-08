@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="vraven.decompiler.Concept: Structured VRAVEN data model for concept."><title>vraven.decompiler.Concept · VRAVEN</title>
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="api" data-root=".."><div class="page"><main id="content" class="content guide">
+<a class="backlink" href="index.html">← Python API</a><div class="eyebrow">vraven.decompiler · class</div>
+<h1>Concept</h1><div class="signature"><code>Concept(id: &#x27;str&#x27;, node_id: &#x27;str&#x27;, node_name: &#x27;str&#x27;, depth: &#x27;float&#x27;, index: &#x27;int&#x27;, feature_axis: &#x27;int&#x27;, direction: &#x27;Tensor&#x27;, mean_activation: &#x27;float&#x27;, std_activation: &#x27;float&#x27;, activation_sparsity: &#x27;float&#x27;, score_variance: &#x27;float&#x27;, top_samples: &#x27;tuple[int, ...]&#x27;, preferred_class: &#x27;int | None&#x27; = None, class_effect_size: &#x27;float | None&#x27; = None, semantic_label: &#x27;str | None&#x27; = None, semantic_confidence: &#x27;float&#x27; = 0.0, grounding: &#x27;list[GroundingEvidence]&#x27; = &lt;factory&gt;, metadata: &#x27;dict[str, Any]&#x27; = &lt;factory&gt;) -&gt; None</code></div>
+<section class="api-doc"><p>Structured VRAVEN data model for concept.</p></section><h2>Usage</h2><pre><code>from vraven.decompiler import Concept
+
+value = Concept(...)</code></pre>
+<h2>Methods</h2><div class="api-members"><details><summary><code>from_dict(payload: &#x27;Mapping[str, Any]&#x27;) -&gt; &#x27;Concept&#x27;</code></summary><p>Public method.</p></details><details><summary><code>to_dict(self, *, include_direction: &#x27;bool&#x27; = True) -&gt; &#x27;dict[str, Any]&#x27;</code></summary><p>Public method.</p></details></div>
+<div class="callout"><strong>Source of truth</strong>This page is generated from the checked-out public symbol, signature, and docstring. Pin the package version for reproducible work.</div>
+<div class="next"><a href="index.html">← API index</a><a href="../outputs/index.html">Output guide →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../assets/app.js"></script></body></html>

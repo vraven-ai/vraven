@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="vraven.explain: Explain one model invocation using the simple functional API."><title>vraven.explain · VRAVEN</title>
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="api" data-root=".."><div class="page"><main id="content" class="content guide">
+<a class="backlink" href="index.html">← Python API</a><div class="eyebrow">vraven · function</div>
+<h1>explain</h1><div class="signature"><code>explain(model: &#x27;Any&#x27;, inputs: &#x27;Any&#x27;, target: &#x27;int | Sequence[int] | torch.Tensor | None&#x27; = None, *, mode: &#x27;str&#x27; = &#x27;fast&#x27;, config: &#x27;VRavenConfig | None&#x27; = None, class_names: &#x27;Mapping[int, str] | Sequence[str] | None&#x27; = None, metadata: &#x27;dict[str, Any] | None&#x27; = None, **config_overrides: &#x27;Any&#x27;) -&gt; &#x27;VRavenReport&#x27;</code></div>
+<section class="api-doc"><p>Explain one model invocation using the simple functional API.</p></section><h2>Usage</h2><pre><code>import vraven
+
+report = vraven.explain(model=model, inputs=x, target=target, mode=&quot;causal&quot;)
+report.write_report(&quot;explanation.html&quot;)</code></pre>
+
+<div class="callout"><strong>Source of truth</strong>This page is generated from the checked-out public symbol, signature, and docstring. Pin the package version for reproducible work.</div>
+<div class="next"><a href="index.html">← API index</a><a href="../outputs/index.html">Output guide →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../assets/app.js"></script></body></html>

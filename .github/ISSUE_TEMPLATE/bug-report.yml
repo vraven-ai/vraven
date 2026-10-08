@@ -1,0 +1,51 @@
+name: Reproducible bug report
+description: Report a VRAVEN failure or unexpected result with enough evidence to reproduce it.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve VRAVEN. Remove private model data and credentials before attaching files or logs.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the command or API call, the observed result and what you expected.
+      placeholder: VRAVEN produced ...; I expected ...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include the smallest runnable code or command and a public or synthetic model when possible.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include VRAVEN, Python and PyTorch versions; operating system; device; and model family.
+      placeholder: |
+        VRAVEN: 0.10.1
+        Python: 3.12
+        PyTorch: 2.x
+        OS/device: Linux, CPU
+        Model: CNN-2D
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Relevant output
+      description: Paste the traceback or attach a small sanitized report, trace or screenshot.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have removed secrets, personal data and proprietary model artefacts.
+          required: true

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="vraven.darkside.analyse_activation_mediation: Patch clean activations into a corrupted run and measure score recovery."><title>vraven.darkside.analyse_activation_mediation · VRAVEN</title>
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="api" data-root=".."><div class="page"><main id="content" class="content guide">
+<a class="backlink" href="index.html">← Python API</a><div class="eyebrow">vraven.darkside · function</div>
+<h1>analyse_activation_mediation</h1><div class="signature"><code>analyse_activation_mediation(model: &#x27;torch.nn.Module&#x27;, clean_inputs: &#x27;Any&#x27;, corrupted_inputs: &#x27;Any&#x27;, *, target: &#x27;int | None&#x27;, layer_names: &#x27;Sequence[str]&#x27;, include_reverse_noising: &#x27;bool&#x27; = True, config: &#x27;VRavenConfig | None&#x27; = None) -&gt; &#x27;AnalysisResult&#x27;</code></div>
+<section class="api-doc"><p>Patch clean activations into a corrupted run and measure score recovery.</p><p>This is an intervention-specific mediation diagnostic. Recovery can contain<br>interaction effects and must not be interpreted as a pure natural indirect<br>effect without stronger causal assumptions.</p></section><h2>Usage</h2><pre><code>from vraven.darkside import analyse_activation_mediation
+
+result = analyse_activation_mediation(... )</code></pre>
+
+<div class="callout"><strong>Source of truth</strong>This page is generated from the checked-out public symbol, signature, and docstring. Pin the package version for reproducible work.</div>
+<div class="next"><a href="index.html">← API index</a><a href="../outputs/index.html">Output guide →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../assets/app.js"></script></body></html>

@@ -1,0 +1,106 @@
+# Operating-system and editor files
+.DS_Store
+**/.DS_Store
+.cursor/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local secrets and environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+.venv*/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# Packaging and compiled outputs
+dist/
+build/
+*.egg-info/
+*.whl
+*.so
+*.dylib
+
+# LaTeX and document build products
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Model checkpoints and portable model binaries
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Generated reports and experiment output
+results/
+release/
+output/
+outputs/
+!site/outputs/
+!site/outputs/**
+exports/
+preview/
+tmp/
+vraven_outputs/
+smoke_report.html
+FIGURE_INDEX.csv
+GALLERY.html
+!site/gallery.html
+PROJECT_INVENTORY_*.json
+RELEASE_MANIFEST.json
+RELEASE_SUMMARY.json
+RELEASE_VALIDATION.md
+SHA256SUMS.txt
+VALIDATION.json
+VALIDATION_REPORT*.md
+vraven_demo/
+vraven_attention_demo/
+vraven_causal_demo/
+vraven_dataset_demo/
+vraven_quickstart/
+vraven_visual_gallery/
+vraven_visual_modes/
+
+# Local data, models, archives and research workspaces
+DATASETS/*/raw/
+DATASETS/*/training_ready/
+KR/
+Models/*
+!Models/README.md
+Publications/
+source_material/
+ZIP/
+*.zip
+
+# Branding working files; approved exports live outside drafts/
+assets/branding/drafts/
+assets/branding/vraven-org-avatar*.png
+assets/branding/vraven-social-banner.png

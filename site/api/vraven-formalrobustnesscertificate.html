@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="vraven.FormalRobustnessCertificate: Machine-readable proof ledger for one sample and an optional cohort."><title>vraven.FormalRobustnessCertificate · VRAVEN</title>
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="api" data-root=".."><div class="page"><main id="content" class="content guide">
+<a class="backlink" href="index.html">← Python API</a><div class="eyebrow">vraven · class</div>
+<h1>FormalRobustnessCertificate</h1><div class="signature"><code>FormalRobustnessCertificate(model_name: &#x27;str&#x27;, property: &#x27;str&#x27;, norm: &#x27;str&#x27;, input_domain: &#x27;tuple[float | None, float | None]&#x27;, target: &#x27;int&#x27;, sample_points: &#x27;list[FormalVerificationPoint]&#x27;, certified_radius_lower_bound: &#x27;float&#x27;, first_inconclusive_epsilon: &#x27;float | None&#x27;, cohort_points: &#x27;list[CertifiedAccuracyPoint]&#x27; = &lt;factory&gt;, selected_indices: &#x27;list[int]&#x27; = &lt;factory&gt;, input_spec: &#x27;InputDomainSpec | None&#x27; = None, verifier: &#x27;str&#x27; = &#x27;vraven_ibp_fx_v1&#x27;, proof_semantics: &#x27;str&#x27; = &#x27;For every input in the declared L-infinity box, optionally intersected with the recorded input domain, interval propagation proves the target-logit lower bound strictly exceeds every competing-logit upper bound.&#x27;, limitations: &#x27;list[str]&#x27; = &lt;factory&gt;, metadata: &#x27;dict[str, Any]&#x27; = &lt;factory&gt;) -&gt; None</code></div>
+<section class="api-doc"><p>Machine-readable proof ledger for one sample and an optional cohort.</p></section><h2>Usage</h2><pre><code>from vraven import FormalRobustnessCertificate
+
+value = FormalRobustnessCertificate(...)</code></pre>
+<h2>Methods</h2><div class="api-members"><details><summary><code>save(self, path: &#x27;str | Path&#x27;) -&gt; &#x27;Path&#x27;</code></summary><p>Public method.</p></details><details><summary><code>to_dict(self) -&gt; &#x27;dict[str, Any]&#x27;</code></summary><p>Public method.</p></details><details><summary><code>write_html(self, path: &#x27;str | Path&#x27;) -&gt; &#x27;Path&#x27;</code></summary><p>Public method.</p></details></div>
+<div class="callout"><strong>Source of truth</strong>This page is generated from the checked-out public symbol, signature, and docstring. Pin the package version for reproducible work.</div>
+<div class="next"><a href="index.html">← API index</a><a href="../outputs/index.html">Output guide →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../assets/app.js"></script></body></html>

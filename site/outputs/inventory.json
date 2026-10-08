@@ -1,0 +1,356 @@
+{
+  "count": 57,
+  "families": {
+    "Reverse": 12,
+    "Proof": 19,
+    "Atlas": 4,
+    "Watch": 1,
+    "Compare": 1,
+    "DarkSide": 19,
+    "Status": 1
+  },
+  "pages": [
+    {
+      "family": "Reverse",
+      "title": "Decision Proof report",
+      "path": "outputs/reverse/decision-proof-report.html",
+      "image": "decision_proof_report.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Adversarial Mechanism Audit",
+      "path": "outputs/reverse/adversarial-mechanism-audit.html",
+      "image": "adversarial_audit_report.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Formal Robustness Certificate",
+      "path": "outputs/reverse/formal-robustness-certificate.html",
+      "image": "formal_robustness_certificate_report.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Formal Causal-Mechanism Certificate",
+      "path": "outputs/reverse/formal-causal-mechanism-certificate.html",
+      "image": "formal_causal_mechanism_certificate_report.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Empirical Robustness Profile",
+      "path": "outputs/reverse/empirical-robustness-profile.html",
+      "image": "adversarial_robustness_profile_report.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Raven Brain \u00b7 causal proof",
+      "path": "outputs/reverse/raven-brain-causal-proof.html",
+      "image": "causal_proof_publication_light.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Raven Flight \u00b7 concept genome",
+      "path": "outputs/reverse/raven-flight-concept-genome.html",
+      "image": "concept_genome_publication_light.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Raven Contrast",
+      "path": "outputs/reverse/raven-contrast.html",
+      "image": "contrastive_proof_publication_light.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Raven Shadow \u00b7 counterfactual",
+      "path": "outputs/reverse/raven-shadow-counterfactual.html",
+      "image": "counterfactual_twin_publication_light.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Raven Dark Matter",
+      "path": "outputs/reverse/raven-dark-matter.html",
+      "image": "dark_matter_publication_light.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Raven Eye \u00b7 model X-ray",
+      "path": "outputs/reverse/raven-eye-model-x-ray.html",
+      "image": "model_xray_publication_light.png"
+    },
+    {
+      "family": "Reverse",
+      "title": "Raven Code \u00b7 programme proof",
+      "path": "outputs/reverse/raven-code-programme-proof.html",
+      "image": "programme_proof_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Explanation report",
+      "path": "outputs/proof/explanation-report.html",
+      "image": "proof_report.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Activation Energy",
+      "path": "outputs/proof/activation-energy.html",
+      "image": "activation_energy_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Attention Structure",
+      "path": "outputs/proof/attention-structure.html",
+      "image": "attention_structure_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Causal Pathway",
+      "path": "outputs/proof/causal-pathway.html",
+      "image": "causal_pathway_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Conflict Field",
+      "path": "outputs/proof/conflict-field.html",
+      "image": "conflict_field_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Counterfactual Delta",
+      "path": "outputs/proof/counterfactual-delta.html",
+      "image": "counterfactual_delta_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Decision Flow",
+      "path": "outputs/proof/decision-flow.html",
+      "image": "decision_flow_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Decision Sankey",
+      "path": "outputs/proof/decision-sankey.html",
+      "image": "decision_sankey_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Evidence Trajectory",
+      "path": "outputs/proof/evidence-trajectory.html",
+      "image": "evidence_trajectory_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Feature Sequence Heatmap",
+      "path": "outputs/proof/feature-sequence-heatmap.html",
+      "image": "feature_sequence_heatmap_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Input Attribution",
+      "path": "outputs/proof/input-attribution.html",
+      "image": "input_attribution_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Mechanism Concordance",
+      "path": "outputs/proof/mechanism-concordance.html",
+      "image": "mechanism_concordance_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Neuron Impact",
+      "path": "outputs/proof/neuron-impact.html",
+      "image": "neuron_impact_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Neuron Importance",
+      "path": "outputs/proof/neuron-importance.html",
+      "image": "neuron_importance_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Perturbation Stability",
+      "path": "outputs/proof/perturbation-stability.html",
+      "image": "perturbation_stability_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Reasoning Dna",
+      "path": "outputs/proof/reasoning-dna.html",
+      "image": "reasoning_dna_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Reasoning Graph",
+      "path": "outputs/proof/reasoning-graph.html",
+      "image": "reasoning_graph_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Relevance Flow",
+      "path": "outputs/proof/relevance-flow.html",
+      "image": "relevance_flow_publication_light.png"
+    },
+    {
+      "family": "Proof",
+      "title": "Spectral Trace",
+      "path": "outputs/proof/spectral-trace.html",
+      "image": "spectral_trace_publication_light.png"
+    },
+    {
+      "family": "Atlas",
+      "title": "Activation Community Graph",
+      "path": "outputs/atlas/activation-community-graph.html",
+      "image": "activation_community_graph_publication_light.png"
+    },
+    {
+      "family": "Atlas",
+      "title": "Reasoning landscape",
+      "path": "outputs/atlas/reasoning-landscape.html",
+      "image": "reasoning_landscape_publication_light.png"
+    },
+    {
+      "family": "Atlas",
+      "title": "Reasoning outliers",
+      "path": "outputs/atlas/reasoning-outliers.html",
+      "image": "reasoning_outliers_publication_light.png"
+    },
+    {
+      "family": "Atlas",
+      "title": "Reasoning similarity",
+      "path": "outputs/atlas/reasoning-similarity.html",
+      "image": "reasoning_similarity_publication_light.png"
+    },
+    {
+      "family": "Watch",
+      "title": "Model evolution",
+      "path": "outputs/watch/model-evolution.html",
+      "image": "model_evolution_publication_light.png"
+    },
+    {
+      "family": "Compare",
+      "title": "Model comparison",
+      "path": "outputs/compare/model-comparison.html",
+      "image": "model_comparison_publication_light.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Activation Mediation",
+      "path": "outputs/darkside/activation-mediation.html",
+      "image": "activation_mediation_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Adversarial Rerouting",
+      "path": "outputs/darkside/adversarial-rerouting.html",
+      "image": "adversarial_rerouting_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Causal Synergy",
+      "path": "outputs/darkside/causal-synergy.html",
+      "image": "causal_synergy_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Circuit Multiplicity",
+      "path": "outputs/darkside/circuit-multiplicity.html",
+      "image": "circuit_multiplicity_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Circuit Wiring",
+      "path": "outputs/darkside/circuit-wiring.html",
+      "image": "circuit_wiring_publication_light.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Class-conditional Internals",
+      "path": "outputs/darkside/class-conditional-internals.html",
+      "image": "class_conditional_internals_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Class-conditional Unit Field",
+      "path": "outputs/darkside/class-conditional-unit-field.html",
+      "image": "class_conditional_unit_field_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Cost\u2013Evidence Trade-off",
+      "path": "outputs/darkside/cost-evidence-trade-off.html",
+      "image": "cost_evidence_tradeoff_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Decision Circuitry",
+      "path": "outputs/darkside/decision-circuitry.html",
+      "image": "decision_circuitry_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Explanation Uncertainty",
+      "path": "outputs/darkside/explanation-uncertainty.html",
+      "image": "explanation_uncertainty_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "High-confidence OOD",
+      "path": "outputs/darkside/high-confidence-ood.html",
+      "image": "high_confidence_ood_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Internal Anatomy",
+      "path": "outputs/darkside/internal-anatomy.html",
+      "image": "internal_anatomy_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Mechanism Transfer",
+      "path": "outputs/darkside/mechanism-transfer.html",
+      "image": "mechanism_transfer_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Prediction Depth",
+      "path": "outputs/darkside/prediction-depth.html",
+      "image": "prediction_depth_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Representation Drift",
+      "path": "outputs/darkside/representation-drift.html",
+      "image": "representation_drift_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Shortcut Reliance",
+      "path": "outputs/darkside/shortcut-reliance.html",
+      "image": "shortcut_reliance_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Stability Geometry",
+      "path": "outputs/darkside/stability-geometry.html",
+      "image": "stability_geometry_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Topological Shift",
+      "path": "outputs/darkside/topological-shift.html",
+      "image": "topological_shift_interactive_dark.png"
+    },
+    {
+      "family": "DarkSide",
+      "title": "Unused Capacity",
+      "path": "outputs/darkside/unused-capacity.html",
+      "image": "unused_capacity_interactive_dark.png"
+    },
+    {
+      "family": "Status",
+      "title": "Scientific Synthesis",
+      "path": "outputs/status/scientific-synthesis.html",
+      "image": "scientific_synthesis.png"
+    }
+  ]
+}

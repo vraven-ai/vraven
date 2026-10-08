@@ -1,0 +1,28 @@
+{
+  "name": "VRAVEN DarkSide Extensions",
+  "version": "1.0.0",
+  "status": "research extension",
+  "merge_namespace": "src/vraven/darkside",
+  "compatible_project": "VRAVEN 0.5.x research alpha",
+  "result_schema": "vraven.darkside.v1",
+  "requested_features": 10,
+  "additional_features": 8,
+  "total_analyses": 18,
+  "render_modes": [
+    "interactive_dark",
+    "publication_light"
+  ],
+  "core_dependencies": [
+    "numpy",
+    "torch",
+    "plotly"
+  ],
+  "analysis_dependencies": [
+    "scipy",
+    "scikit-learn"
+  ],
+  "optional_dependencies": {
+    "H1_persistence": "ripser"
+  },
+  "licence": "Apache-2.0"
+}

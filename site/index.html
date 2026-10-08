@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="VRAVEN is an evidence-aware PyTorch explainability toolkit for understanding predictions, testing mechanisms and publishing auditable reports.">
+  <title>VRAVEN · Evidence-aware AI explainability</title><link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="home" data-root=".">
+<div class="page"><main id="content" class="content">
+  <section class="hero">
+    <div>
+      <div class="vraven-wordmark hero-wordmark" data-text="VRAVEN" aria-label="VRAVEN">VRAVEN</div>
+      <div class="eyebrow">Evidence-aware AI explainability · local first</div>
+      <h1>Understand why your model decided.</h1>
+      <p class="lede">VRAVEN is a PyTorch explainability and model-auditing toolkit. It turns predictions into inspectable evidence, tests internal mechanisms through controlled interventions, and produces reports that state what the evidence can—and cannot—support.</p>
+      <div class="actions"><a class="button primary" href="guides/getting-started.html">Explain your first model</a><a class="button" href="outputs/index.html">Explore real explanations</a></div>
+      <div class="status-line"><span class="status">Runs locally</span><span class="status">Python 3.10+</span><span class="status">PyTorch 2.2+</span></div>
+    </div>
+    <div class="hero-mark"><figure class="raven-portrait"><img src="assets/vraven-avatar.png" alt="VRAVEN raven calling while perched on a branch"><figcaption><span>Official mark</span><strong>Observe · test · explain</strong></figcaption></figure></div>
+  </section>
+
+  <div class="metrics" aria-label="VRAVEN capability summary">
+    <div class="metric"><strong>57</strong><span>documented outputs</span></div>
+    <div class="metric"><strong>20</strong><span>core visual methods</span></div>
+    <div class="metric"><strong>175</strong><span>API symbols</span></div>
+    <div class="metric"><strong>22</strong><span>CLI commands</span></div>
+    <div class="metric"><strong>19</strong><span>DarkSide audits</span></div>
+  </div>
+
+  <div class="section-head"><div><div class="eyebrow">Reference depth</div><h2>Go from question to exact call.</h2></div><p>Short paths for first use; complete generated references when you need precision.</p></div>
+  <div class="grid">
+    <article class="card"><span class="number">OUTPUTS</span><h3><a href="outputs/index.html">57 result pages</a></h3><p>Each visual or report gets its own code, real image, reading guide, evidence level and claim boundary.</p></article>
+    <article class="card"><span class="number">PYTHON</span><h3><a href="api/index.html">Complete API</a></h3><p>Generated from 175 exported symbols across the core, decompiler and DarkSide namespaces.</p></article>
+    <article class="card"><span class="number">TERMINAL</span><h3><a href="cli/index.html">Complete CLI</a></h3><p>Every command, argument, default and direct <code>--help</code> route from the real parser.</p></article>
+  </div>
+
+  <div class="section-head"><div><div class="eyebrow">Explainability with evidence</div><h2>Move beyond a single attribution map.</h2></div><p>Explain one prediction, test a suspected mechanism, compare models, or map reasoning across a dataset.</p></div>
+  <div class="family-grid">
+    <a class="family" href="capabilities.html#capture"><span class="kicker">Acquire</span><h3>Capture</h3><p>Record activations, gradients, metadata and Mechanism IR from a real forward pass.</p></a>
+    <a class="family" href="capabilities.html#proof"><span class="kicker">Explain</span><h3>Proof</h3><p>Explain a single prediction with traceable evidence, competing signals and exportable visuals.</p></a>
+    <a class="family" href="capabilities.html#reverse"><span class="kicker">Decompile</span><h3>Reverse</h3><p>Recover the decision programme, test its fidelity and issue causal or robustness certificates.</p></a>
+    <a class="family" href="capabilities.html#atlas"><span class="kicker">Map</span><h3>Atlas</h3><p>Explore representation communities, similarity, outliers and reasoning landscapes across samples.</p></a>
+    <a class="family" href="capabilities.html#watch"><span class="kicker">Track</span><h3>Watch</h3><p>Measure how internal representations and decisions evolve across checkpoints.</p></a>
+    <a class="family" href="capabilities.html#darkside"><span class="kicker">Audit</span><h3>Compare + DarkSide</h3><p>Contrast models and expose shortcuts, drift, failure anatomy, rerouting and uncertainty.</p></a>
+  </div>
+
+  <div class="section-head"><div><div class="eyebrow">Public walkthrough</div><h2>Evidence you can inspect.</h2></div><p>These results come from torchvision MobileNetV2 and one openly licensed Labrador photograph.</p></div>
+  <div class="gallery-grid">
+    <article class="shot"><img src="assets/walkthrough/decision-flow.png" alt="VRAVEN MobileNetV2 decision flow"><div class="shot-body"><strong>Decision flow</strong><span>Supporting and opposing first-order signals through 96 captured layers</span></div></article>
+    <article class="shot"><img src="assets/walkthrough/causal-pathway.png" alt="VRAVEN MobileNetV2 intervention results"><div class="shot-body"><strong>Intervention evidence</strong><span>Three controlled layer-output interventions for the Labrador target</span></div></article>
+  </div>
+  <div class="actions"><a class="button primary" href="walkthroughs/mobilenet-v2.html">Follow the full walkthrough</a><a class="button" href="gallery.html">Open the output gallery</a></div>
+
+  <div class="section-head"><div><div class="eyebrow">A disciplined path</div><h2>From model file to defensible claim.</h2></div></div>
+  <div class="pathway"><div><small>01</small><strong>Load</strong><span class="muted">Model or bundle</span></div><div><small>02</small><strong>Observe</strong><span class="muted">Activations and paths</span></div><div><small>03</small><strong>Intervene</strong><span class="muted">Change and retest</span></div><div><small>04</small><strong>Report</strong><span class="muted">Evidence + limits</span></div></div>
+  <div class="hero-card"><img src="assets/vraven-methodology.png" alt="The VRAVEN methodology"><div class="caption">The VRAVEN methodology connects a trained model to an evidence-tested Decision Proof.</div></div>
+
+  <section class="identity-banner">
+    <div class="identity-signature"><div class="vraven-wordmark banner-wordmark" data-text="VRAVEN" aria-label="VRAVEN">VRAVEN</div><span>Visual Reasoning and Activation Visualisation for Explainable Networks</span></div>
+    <div><div class="eyebrow">The name and the mark</div><h2>A patient observer of hidden structure.</h2><p><strong>VRAVEN</strong> means <em>Visual Reasoning and Activation Visualisation for Explainable Networks</em>. The raven represents observation, memory, adaptability and problem-solving: qualities that match a system built to inspect a model carefully before making a claim.</p><a href="identity.html">Read the identity and origin story →</a></div>
+  </section>
+
+  <div class="research-link"><div><div class="eyebrow">Research lineage</div><h2>VRAVEN could not have taken its present form without the research that came before it.</h2><p>The product translates ideas from difficult work on attribution, faithfulness, causal mechanisms and programme extraction into one usable, testable workflow. Every paper remains the work of its authors; VRAVEN's contribution is the careful synthesis, engineering and evidence discipline that connects those ideas.</p></div><a class="button" href="research.html">Meet the intellectual foundations</a></div>
+
+  <div class="callout"><strong>Your model stays yours</strong>VRAVEN runs locally, adds no telemetry and does not upload models or tensors. Reports disclose evidence type, coverage and unresolved computation.</div>
+  <footer>VRAVEN · Visual Reasoning and Activation Visualisation for Explainable Networks · Apache-2.0</footer>
+</main></div><script src="assets/app.js"></script>
+</body></html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Does the model rely on a tested shortcut signal?"><title>Shortcut Reliance · VRAVEN</title>
+<link rel="stylesheet" href="../../assets/styles.css"></head>
+<body data-page="outputs" data-root="../.."><div class="page"><main id="content" class="content guide">
+
+<a class="backlink" href="../../index.html">← Observatory home</a>
+<div class="eyebrow">DarkSide · 16 of 19</div>
+<h1>Shortcut Reliance</h1>
+<p class="lede">Does the model rely on a tested shortcut signal?</p>
+<div class="output-nav"><a rel="prev" title="Representation Drift" href="representation-drift.html">← Prev (K)</a><span>image_pattern_cnn2d · <a href="../../assets/artifacts/shortcut_reliance_interactive_dark.png">Open result image ↗</a></span><a rel="next" title="Stability Geometry" href="stability-geometry.html">Next (J) →</a></div>
+<figure class="evidence-figure"><a href="../../assets/artifacts/shortcut_reliance_interactive_dark.png"><img src="../../assets/artifacts/shortcut_reliance_interactive_dark.png" alt="Shortcut Reliance result for the image_pattern_cnn2d fixture"></a><figcaption>Real output from the small deterministic CNN-2D documentation fixture.</figcaption></figure>
+<section class="reading-grid"><div><h2>What it shows</h2><p>An internal audit view for the synthetic CNN-2D fixture.</p></div><div><h2>Claim boundary</h2><p>This diagnostic is hypothesis-generating unless paired with appropriate controls or formal verification.</p></div></section>
+<h2>Run this with the installed CLI</h2>
+<p>Point VRAVEN at a validated model bundle. This produces one focused HTML report and works after a normal PyPI installation.</p><pre><code>vraven analyse ./my-model \
+  --task explain \
+  --preset standard \
+  --format html \
+  --output vraven-report.html</code></pre>
+<p>Start with the <a href="../../guides/model-folder.html">model-folder guide</a> if your bundle is not prepared yet. The larger documentation fixture is a contributor workflow described in <a href="../../guides/source-checkout.html">Develop from source</a>.</p>
+<h2>Generate this view</h2><pre><code>from vraven.darkside import detect_shortcut_reliance
+
+result = detect_shortcut_reliance(model, inputs, target=target, feature_groups=feature_groups)
+figure = result.figure(mode=&quot;publication_light&quot;)
+figure.write_html(&quot;result.html&quot;)</code></pre>
+<div class="parameter-grid"><div><strong>Input</strong><span>Model bundle, one reference input, selected target</span></div><div><strong>Display mode</strong><span><code>publication_light</code></span></div><div><strong>Evidence level</strong><span>Interventional or perturbational</span></div><div><strong>Machine output</strong><span><code>darkside/shortcut_reliance.html</code></span></div><div><strong>Related API</strong><span><a href="../../api/index.html?q=vraven.darkside.detect_shortcut_reliance">vraven.darkside.detect_shortcut_reliance</a></span></div><div><strong>Fixture</strong><span><code>image_pattern_cnn2d</code></span></div></div>
+<h2>How to read the result</h2><ol><li>Start with the title and target metadata in the generated report.</li><li>Read the strongest structures first, then inspect weaker or opposing evidence.</li><li>Check the stated evidence level and status before treating a relationship as causal or formal.</li><li>Retain the trace, model version, preprocessing, and VRAVEN version with any published claim.</li></ol>
+<div class="callout"><strong>Reproducibility note</strong>The screenshot is public documentation evidence. The source run remains local-first; raw provenance files are not published because they can contain machine paths.</div>
+<div class="next"><a rel="prev" title="Representation Drift" href="representation-drift.html">← Prev (K)</a><a rel="next" title="Stability Geometry" href="stability-geometry.html">Next (J) →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../../assets/app.js"></script></body></html>

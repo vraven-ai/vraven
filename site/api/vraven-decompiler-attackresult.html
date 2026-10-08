@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="vraven.decompiler.AttackResult: One measured attack trial (Layer 1 stress + optional Layer 2 ΔM)."><title>vraven.decompiler.AttackResult · VRAVEN</title>
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="api" data-root=".."><div class="page"><main id="content" class="content guide">
+<a class="backlink" href="index.html">← Python API</a><div class="eyebrow">vraven.decompiler · class</div>
+<h1>AttackResult</h1><div class="signature"><code>AttackResult(attack_name: &#x27;str&#x27;, attack_family: &#x27;str&#x27;, succeeded: &#x27;bool&#x27;, epsilon: &#x27;float&#x27;, steps: &#x27;int&#x27;, prediction_flipped: &#x27;bool&#x27;, perturbation_norm_l2: &#x27;float&#x27;, perturbation_norm_linf: &#x27;float&#x27;, original_margin: &#x27;float&#x27;, adversarial_margin: &#x27;float&#x27;, margin_delta: &#x27;float&#x27;, original_prediction: &#x27;int&#x27;, adversarial_prediction: &#x27;int&#x27;, vulnerable_concepts: &#x27;list[str]&#x27; = &lt;factory&gt;, norm: &#x27;str&#x27; = &#x27;linf&#x27;, mechanism_survival: &#x27;float | None&#x27; = None, mechanism_delta_l1: &#x27;float | None&#x27; = None, mechanism_delta_linf: &#x27;float | None&#x27; = None, mechanism_suppressed: &#x27;list[str]&#x27; = &lt;factory&gt;, mechanism_activated: &#x27;list[str]&#x27; = &lt;factory&gt;, first_mechanism_divergence: &#x27;str | None&#x27; = None, objective: &#x27;str&#x27; = &#x27;untargeted_negative_logit&#x27;, mechanism_cosine_survival: &#x27;float | None&#x27; = None, mechanism_energy_survival: &#x27;float | None&#x27; = None, mechanism_top_active_cosine_survival: &#x27;float | None&#x27; = None, mechanism_worst_layer_cosine_survival: &#x27;float | None&#x27; = None, mechanism_worst_layer: &#x27;str | None&#x27; = None) -&gt; None</code></div>
+<section class="api-doc"><p>One measured attack trial (Layer 1 stress + optional Layer 2 ΔM).</p></section><h2>Usage</h2><pre><code>from vraven.decompiler import AttackResult
+
+value = AttackResult(...)</code></pre>
+
+<div class="callout"><strong>Source of truth</strong>This page is generated from the checked-out public symbol, signature, and docstring. Pin the package version for reproducible work.</div>
+<div class="next"><a href="index.html">← API index</a><a href="../outputs/index.html">Output guide →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../assets/app.js"></script></body></html>

@@ -1,0 +1,34 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Clone VRAVEN, install an editable development environment, run tests, and regenerate research documentation fixtures."><title>Develop from source · VRAVEN</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="source" data-root=".."><div class="page"><main id="content" class="content narrow guide">
+  <div class="eyebrow">Contributor guide</div><h1>Develop VRAVEN from a Git checkout.</h1><p class="lede">Most users should install VRAVEN from PyPI and use the <code>vraven</code> command. Clone the repository when you want to change the package, run its test suite, or regenerate research fixtures.</p>
+
+  <h2>Choose the right path</h2>
+  <div class="reading-grid"><div><h3>Using VRAVEN</h3><p>Install from PyPI, prepare a model bundle, then run <code>vraven analyse</code>. You do not need the repository scripts.</p><p><a href="getting-started.html">Install and start →</a></p></div><div><h3>Developing VRAVEN</h3><p>Clone the source, install it in editable mode, and use scripts only for tests, documentation, or research-fixture generation.</p></div></div>
+
+  <h2>Clone and install</h2><pre><code>git clone https://github.com/vraven-ai/vraven.git
+cd vraven
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"</code></pre>
+  <p>Editable installation still provides the same public command. Confirm the environment before changing code:</p><pre><code>vraven --version
+vraven doctor
+python -m pytest</code></pre>
+
+  <h2>Analyse your own model folder</h2><p>Use the installed CLI even inside a checkout:</p><pre><code>vraven bundle ./my-model
+vraven analyse ./my-model \
+  --task explain \
+  --preset standard \
+  --format html \
+  --output vraven-report.html</code></pre>
+  <p>The <a href="model-folder.html">model-folder guide</a> explains the required manifest, weights, input, and architecture factory.</p>
+
+  <h2>Regenerate the research fixture</h2><p>The documentation example named <code>image_pattern_cnn2d</code> is generated data, not a file shipped by PyPI or committed to Git. Contributors can build it locally, then run the comprehensive artifact pipeline:</p><pre><code>python scripts/train_vraven_novel_probes.py
+python scripts/run_vraven_artifact.py Models/image_pattern_cnn2d</code></pre>
+  <div class="callout warning"><strong>Contributor workflow</strong>The training command creates several synthetic probe models and can take substantially longer than a normal CLI analysis. The artifact runner produces a broad research and documentation suite, while <code>vraven analyse</code> intentionally produces one requested report at a time.</div>
+
+  <h2>Rebuild the documentation reference</h2><pre><code>python scripts/build_docs_reference.py
+python scripts/check_docs_site.py</code></pre><p>The reference builder reads the checked-out Python API and CLI parser so command pages stay aligned with the implementation.</p>
+
+  <nav class="next"><a href="model-folder.html">← Model folder</a><a href="../cli/index.html">CLI reference →</a></nav>
+</main></div><script src="../assets/app.js"></script></body></html>

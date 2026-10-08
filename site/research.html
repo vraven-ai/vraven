@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The research foundations that shaped VRAVEN's evidence-aware approach to neural-network explainability, causal testing and mechanism decompilation.">
+  <title>Research foundations · VRAVEN</title><link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="research" data-root=".">
+<div class="page"><main id="content" class="content guide">
+  <div class="eyebrow">Research foundations</div>
+  <h1>The papers without which VRAVEN would not exist in its present form.</h1>
+  <p class="lede">VRAVEN is the product of sustained reading across difficult research on prediction explanation, faithfulness, mechanistic interpretability, causal testing and programme extraction. It turns compatible ideas from that literature into a usable engineering workflow while preserving the limits attached to each kind of evidence.</p>
+
+  <div class="lineage-statement"><span>Our scholarly debt</span><p>The innovations listed below belong to their authors and research communities. VRAVEN does not claim to have invented attribution, concept testing, causal abstraction, circuit analysis or programme extraction. Without these papers—and the questions, methods and cautions they introduced—VRAVEN could not have been conceived in its current form. The product contribution is synthesis: reading across separate research traditions, implementing compatible ideas, connecting them into reproducible workflows and making their evidence boundaries visible to users.</p></div>
+
+  <div class="research-principle">
+    <strong>Attribution showed where evidence appears.</strong>
+    <strong>Evaluation showed that plausible pictures are not enough.</strong>
+    <strong>Mechanistic and causal work showed why interventions matter.</strong>
+    <strong>Programme extraction suggested that recovered mechanisms can become executable.</strong>
+  </div>
+
+  <section class="paper-group" id="attribution">
+    <div class="section-head"><div><div class="eyebrow">Foundation I</div><h2>Prediction explanation and attribution</h2></div><p>Methods that established local explanation, feature attribution, localisation and practical PyTorch interpretability.</p></div>
+    <div class="paper-list">
+      <article class="paper"><div><span>Ribeiro, Singh &amp; Guestrin · 2016</span><h3>Why Should I Trust You?</h3></div><p>Established local surrogate explanations and made model-agnostic, instance-level interpretability a practical interface.</p><a href="https://arxiv.org/abs/1602.04938">Open paper ↗</a></article>
+      <article class="paper"><div><span>Lundberg &amp; Lee · 2017</span><h3>A Unified Approach to Interpreting Model Predictions</h3></div><p>Unified additive feature-attribution methods through SHAP and sharpened expectations around consistent local attribution.</p><a href="https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html">Paper ↗</a></article>
+      <article class="paper"><div><span>Sundararajan, Taly &amp; Yan · 2017</span><h3>Axiomatic Attribution for Deep Networks</h3></div><p>Introduced Integrated Gradients and the axioms of sensitivity and implementation invariance.</p><a href="https://proceedings.mlr.press/v70/sundararajan17a.html">Paper ↗</a></article>
+      <article class="paper"><div><span>Shrikumar, Greenside &amp; Kundaje · 2017</span><h3>Learning Important Features Through Propagating Activation Differences</h3></div><p>Developed DeepLIFT, connecting activation differences to efficient importance propagation.</p><a href="https://proceedings.mlr.press/v70/shrikumar17a.html">Paper ↗</a></article>
+      <article class="paper"><div><span>Selvaraju et al. · 2017</span><h3>Grad-CAM</h3></div><p>Demonstrated gradient-weighted visual localisation for convolutional networks and influenced readable spatial evidence views.</p><a href="https://arxiv.org/abs/1610.02391">Open paper ↗</a></article>
+      <article class="paper"><div><span>Smilkov et al. · 2017</span><h3>SmoothGrad</h3></div><p>Used noise-averaged gradients to reduce visual noise, informing VRAVEN's interest in stability rather than one-shot saliency.</p><a href="https://arxiv.org/abs/1706.03825">Paper ↗</a></article>
+      <article class="paper"><div><span>Kokhlikyan et al. · 2020</span><h3>Captum</h3></div><p>Showed how a broad interpretability interface can be integrated cleanly with PyTorch models and research workflows.</p><a href="https://arxiv.org/abs/2009.07896">Paper ↗</a></article>
+    </div>
+  </section>
+
+  <section class="paper-group" id="evaluation">
+    <div class="section-head"><div><div class="eyebrow">Foundation II</div><h2>Concepts, faithfulness and evaluation</h2></div><p>Research that pushed explainability beyond attractive visualisations toward concepts, falsification and measurable fidelity.</p></div>
+    <div class="paper-list">
+      <article class="paper"><div><span>Kim et al. · 2018</span><h3>Interpretability Beyond Feature Attribution</h3></div><p>Introduced TCAV and concept-level testing, helping motivate VRAVEN's internal concept discovery and concept-evolution views.</p><a href="https://proceedings.mlr.press/v80/kim18d.html">Paper ↗</a></article>
+      <article class="paper"><div><span>Adebayo et al. · 2018</span><h3>Sanity Checks for Saliency Maps</h3></div><p>Demonstrated that explanations must respond to model and data randomisation; visual plausibility alone is insufficient.</p><a href="https://arxiv.org/abs/1810.03292">Paper ↗</a></article>
+      <article class="paper"><div><span>Yeh et al. · 2019</span><h3>On the (In)fidelity and Sensitivity of Explanations</h3></div><p>Formalised explanation infidelity and sensitivity, reinforcing the need to report stability and evidence limitations.</p><a href="https://arxiv.org/abs/1901.09392">Paper ↗</a></article>
+      <article class="paper"><div><span>Hooker et al. · 2019</span><h3>ROAR: A Benchmark for Interpretability Methods</h3></div><p>Connected attribution quality to model retraining under feature removal, encouraging outcome-based evaluation.</p><a href="https://arxiv.org/abs/1806.10758">Paper ↗</a></article>
+      <article class="paper"><div><span>Jain &amp; Wallace · 2019</span><h3>Attention is not Explanation</h3></div><p>Warned against treating attention weights as causal explanations without additional tests.</p><a href="https://doi.org/10.18653/v1/N19-1357">Paper ↗</a></article>
+      <article class="paper"><div><span>Wiegreffe &amp; Pinter · 2019</span><h3>Attention is not not Explanation</h3></div><p>Refined that debate by demanding clear definitions, baselines and falsifiable claims about explanatory status.</p><a href="https://doi.org/10.18653/v1/D19-1002">Paper ↗</a></article>
+      <article class="paper"><div><span>Rudin · 2019</span><h3>Stop Explaining Black Box Models for High-Stakes Decisions</h3></div><p>Defines an important boundary: post-hoc explanation does not replace inherently interpretable models where stakes demand them.</p><a href="https://doi.org/10.1038/s42256-019-0048-x">Paper ↗</a></article>
+    </div>
+  </section>
+
+  <section class="paper-group" id="mechanisms">
+    <div class="section-head"><div><div class="eyebrow">Foundation III</div><h2>Mechanistic interpretability and causal testing</h2></div><p>Work that shaped intervention-tested mechanisms, cross-layer features, circuits and known-mechanism evaluation.</p></div>
+    <div class="paper-list">
+      <article class="paper featured"><div><span>Geiger et al. · 2025</span><h3>Causal Abstraction</h3></div><p>Provides a formal basis for asking whether a high-level recovered mechanism remains faithful under intervention.</p><a href="https://jmlr.org/papers/v26/23-0058.html">Paper ↗</a></article>
+      <article class="paper"><div><span>Gupta et al. · 2024</span><h3>InterpBench</h3></div><p>Motivates evaluation on systems with known mechanisms rather than relying only on plausible stories from natural models.</p><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/a8f7d43ae092d9a5295775eb17f3f4f7-Abstract-Datasets_and_Benchmarks_Track.html">Paper ↗</a></article>
+      <article class="paper"><div><span>Cao et al. · 2025</span><h3>NeurFlow</h3></div><p>Studies neuron groups and functional interactions, adjacent to VRAVEN's grouped internal-mechanism analysis.</p><a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/b6260ae5566442da053e5ab5d691067a-Abstract-Conference.html">Paper ↗</a></article>
+      <article class="paper"><div><span>Lindsey et al. · 2024</span><h3>Sparse Crosscoders</h3></div><p>Motivates persistent cross-layer features and cautions against treating fixed neuron identity as the complete unit of explanation.</p><a href="https://transformer-circuits.pub/2024/crosscoders/index.html">Research article ↗</a></article>
+      <article class="paper"><div><span>Ameisen et al. · 2025</span><h3>Circuit Tracing</h3></div><p>Provides adjacent work on feature-level computational graphs and intervention-backed circuit validation.</p><a href="https://transformer-circuits.pub/2025/attribution-graphs/methods.html">Research article ↗</a></article>
+    </div>
+  </section>
+
+  <section class="paper-group" id="decompilation">
+    <div class="section-head"><div><div class="eyebrow">Foundation IV</div><h2>Programme extraction and neural decompilation</h2></div><p>Research that made executable recovery conceivable—and clarified where the scientific limits remain.</p></div>
+    <div class="paper-list">
+      <article class="paper featured"><div><span>Michaud et al. · 2024</span><h3>Opening the AI Black Box</h3></div><p>Demonstrates programme synthesis through mechanistic interpretability on algorithmic RNN tasks.</p><a href="https://arxiv.org/abs/2402.05110">Paper ↗</a></article>
+      <article class="paper"><div><span>Zhang et al. · 2026</span><h3>Weights to Code</h3></div><p>Extracts interpretable algorithms from a deliberately discrete transformer and helps define the boundary of broader decompilation claims.</p><a href="https://arxiv.org/abs/2601.05770">Paper ↗</a></article>
+      <article class="paper"><div><span>Sutter et al. · 2025</span><h3>The Non-Linear Representation Dilemma</h3></div><p>Warns that unconstrained high-level alignments can become vacuous, motivating compactness, intervention and validity constraints.</p><a href="https://arxiv.org/abs/2507.08802">Paper ↗</a></article>
+    </div>
+  </section>
+
+  <div class="callout warning"><strong>How to read this page</strong>“Informed by” does not mean “implements exactly.” VRAVEN combines ideas across these traditions and must still be evaluated across architectures, datasets, seeds and known-mechanism benchmarks. The project does not claim to recover the unique true explanation of every model.</div>
+  <div class="next"><a href="science.html">← Evidence and claims</a><a href="outputs/index.html">See the resulting outputs →</a></div>
+  <footer>Primary papers and official research pages are linked directly. Reading list reviewed 26 September 2026.</footer>
+</main></div><script src="assets/app.js"></script>
+</body></html>

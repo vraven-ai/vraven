@@ -1,0 +1,18 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Install VRAVEN and create a first model explanation report."><title>Install and start · VRAVEN</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="start" data-root=".."><div class="page"><main id="content" class="content narrow guide">
+  <div class="eyebrow">Installation</div><h1>Install VRAVEN and prove it works.</h1><p class="lede">Use Python 3.10 or newer, isolate the installation, then create one demonstration report.</p>
+  <div class="steps steps-unnumbered">
+    <section class="step"><h2>Check Python</h2><pre><code>python3 --version</code></pre><p>The result must be Python 3.10 or newer. On macOS with Homebrew, the command may be <code>python3.13</code>.</p></section>
+    <section class="step"><h2>Create a clean environment</h2><pre><code>python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip</code></pre><p>On Windows PowerShell, activate with <code>.venv\Scripts\Activate.ps1</code>.</p></section>
+    <section class="step"><h2>Install and inspect</h2><pre><code>python -m pip install vraven
+vraven --version
+vraven doctor</code></pre><p><code>doctor</code> reports Python, PyTorch, available devices and optional report capabilities.</p></section>
+    <section class="step"><h2>Create your first report</h2><pre><code>vraven demo --mode gradient \
+  --report-format html \
+  --output vraven-demo.html</code></pre><p>Open <code>vraven-demo.html</code> in a browser. VRAVEN writes one report because one explicit output is easier to automate and review.</p></section>
+  </div>
+  <div class="callout"><strong>Want to see the raven?</strong><code>vraven raven --style dance</code> is optional terminal personality; it does not alter scientific output.</div>
+  <nav class="next"><a href="../index.html">← Overview</a><a href="model-folder.html">Next: use a model folder →</a></nav>
+</main></div><script src="../assets/app.js"></script></body></html>

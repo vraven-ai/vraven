@@ -1,0 +1,27 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Run bounded adversarial stress testing with VRAVEN."><title>Adversarial testing · VRAVEN</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="adversarial" data-root=".."><div class="page"><main id="content" class="content narrow guide">
+  <div class="eyebrow">Guide 04 · Robustness</div><h1>Stress-test a model under a declared budget.</h1><p class="lede">Measure empirical behaviour under controlled attacks without presenting the result as a formal guarantee.</p>
+  <h2>Run a quick sample audit</h2><pre><code>vraven adversarial model.pt \
+  --model-format state_dict \
+  --factory my_project.models:Classifier \
+  --input input.npy \
+  --scope sample \
+  --attacks quick \
+  --epsilon 0.03 \
+  --format html \
+  --output adversarial-report.html</code></pre>
+  <h2>Measure an epsilon curve</h2><pre><code>vraven adversarial model.pt \
+  --model-format state_dict \
+  --factory my_project.models:Classifier \
+  --input batch.npy \
+  --labels labels.npy \
+  --scope curve \
+  --attacks fgsm,pgd_linf \
+  --epsilon-grid 0.0,0.01,0.02,0.03 \
+  --max-samples 128 \
+  --format html \
+  --output robustness-curve.html</code></pre>
+  <ul class="checklist"><li>Record the norm, epsilon, steps, restarts and clipping range.</li><li>Use representative samples and supply labels for accuracy curves.</li><li>Treat attack failure as “not found within this budget”, not proof of robustness.</li></ul>
+  <div class="callout warning"><strong>Need a formal result?</strong><code>vraven certify</code> performs local L-infinity verification only for supported operators. Unsupported computation is reported rather than silently ignored.</div>
+  <nav class="next"><a href="explain.html">← Explanation</a><a href="counterfactual.html">Next: counterfactual search →</a></nav>
+</main></div><script src="../assets/app.js"></script></body></html>

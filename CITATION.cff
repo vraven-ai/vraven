@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use VRAVEN in research, cite the software release and the associated method paper when available."
+title: "VRAVEN: Visual Reasoning and Activation Visualisation for Explainable Networks"
+type: software
+authors:
+  - family-names: Jeremiah
+    given-names: Daniel
+version: 0.10.1
+license: Apache-2.0
+repository-code: "https://github.com/vraven-ai/vraven"
+url: "https://vraven-ai.github.io/vraven/"
+abstract: >-
+  VRAVEN is an evidence-aware explainability and causal model-auditing toolkit
+  for PyTorch. It traces internal representations, tests candidate mechanisms,
+  and produces reproducible reports with explicit evidence boundaries.
+keywords:
+  - explainable artificial intelligence
+  - mechanistic interpretability
+  - causal decompilation
+  - PyTorch
+  - neural networks

@@ -1,0 +1,29 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A compact quick start for integrating VRAVEN model explanation in Python."><title>Python API quick start · VRAVEN</title><link rel="stylesheet" href="assets/styles.css"></head>
+<body data-page="python" data-root="."><div class="page"><main id="content" class="content narrow guide">
+<div class="eyebrow">Python API</div><h1>Put VRAVEN inside your workflow.</h1><p class="lede">Use the API when you need repeatable analyses, notebooks, dataset loops or your own report pipeline.</p>
+<div class="callout"><strong>Looking for every symbol?</strong>Open the <a href="api/index.html">complete generated Python API reference</a> for exact signatures, public methods, and per-symbol pages.</div>
+<h2>Explain one prediction</h2><pre><code>import vraven
+
+result = vraven.explain(
+    model=model,
+    input_tensor=x,
+    target=target_class,
+    mode="causal",
+)
+
+result.report("explanation.html")</code></pre><p>Use <code>fast</code>, <code>gradient</code> or <code>causal</code> mode according to the evidence required and the compute available.</p>
+<h2>Reuse one explainer</h2><pre><code>from vraven import Explainer
+
+explainer = Explainer(model, mode="gradient")
+for sample in dataset:
+    trace = explainer.explain(sample)
+    trace.export("json", output_dir="runs")</code></pre>
+<h2>Keep model configuration together</h2><pre><code>vraven bundle-init ./my_model
+vraven explain --model-dir ./my_model --report html</code></pre><p>A model bundle can carry weights, architecture loader, example input and VRAVEN defaults. See <a href="guides/model-folder.html">the model-folder walkthrough</a>.</p>
+<h2>Choose one output</h2><pre><code># One report per invocation
+vraven explain --model-dir ./my_model --report html
+vraven explain --model-dir ./my_model --report pdf
+vraven explain --model-dir ./my_model --report json</code></pre>
+<div class="callout"><strong>API stability</strong>VRAVEN remains pre-1.0. Pin the package version in reproducible environments and retain the version and trace metadata with published results.</div>
+<div class="next"><a href="guides/model-folder.html">← Model folders</a><a href="science.html">Understand evidence levels →</a></div><footer>For the exact installed surface, run <code>vraven features</code> and inspect the package API.</footer>
+</main></div><script src="assets/app.js"></script></body></html>

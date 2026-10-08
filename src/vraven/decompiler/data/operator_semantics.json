@@ -1,0 +1,539 @@
+[
+  {
+    "patterns": [
+      "placeholder"
+    ],
+    "role": "input",
+    "family": "input",
+    "description": "External model input",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "output"
+    ],
+    "role": "output",
+    "family": "output",
+    "description": "Model output boundary",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "conv1d",
+      "conv2d",
+      "conv3d",
+      "convolution",
+      "conv_transpose"
+    ],
+    "role": "detect",
+    "family": "convolution",
+    "description": "Local receptive-field transformation that detects spatial or sequential motifs",
+    "intervention": true,
+    "feature_axis": "channel"
+  },
+  {
+    "patterns": [
+      "linear",
+      "addmm",
+      "matmul",
+      "mm",
+      "bmm",
+      "einsum"
+    ],
+    "role": "transform",
+    "family": "linear",
+    "description": "Learned or explicit linear transformation",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "embedding",
+      "embedding_bag"
+    ],
+    "role": "retrieve",
+    "family": "embedding",
+    "description": "Retrieves a learned representation from an index",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "relu",
+      "relu6",
+      "leaky_relu",
+      "prelu",
+      "rrelu",
+      "threshold"
+    ],
+    "role": "gate",
+    "family": "activation",
+    "description": "Positive or thresholded nonlinear gate",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "gelu",
+      "silu",
+      "mish",
+      "softplus",
+      "elu",
+      "selu",
+      "celu"
+    ],
+    "role": "gate",
+    "family": "activation",
+    "description": "Smooth nonlinear gate",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "sigmoid",
+      "hardsigmoid"
+    ],
+    "role": "gate",
+    "family": "activation",
+    "description": "Bounded nonlinear gate",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "tanh",
+      "hardtanh"
+    ],
+    "role": "gate",
+    "family": "activation",
+    "description": "Signed bounded nonlinear gate",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "softmax",
+      "log_softmax"
+    ],
+    "role": "compare",
+    "family": "normalisation",
+    "description": "Normalises competing scores into a relative distribution",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "batch_norm",
+      "batchnorm"
+    ],
+    "role": "normalise",
+    "family": "normalisation",
+    "description": "Normalises activations using batch or running statistics",
+    "intervention": true,
+    "feature_axis": "channel"
+  },
+  {
+    "patterns": [
+      "layer_norm",
+      "layernorm",
+      "rms_norm",
+      "group_norm",
+      "groupnorm",
+      "instance_norm",
+      "instancenorm"
+    ],
+    "role": "normalise",
+    "family": "normalisation",
+    "description": "Normalises a representation within a sample",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "dropout",
+      "feature_dropout",
+      "alpha_dropout"
+    ],
+    "role": "gate",
+    "family": "regularisation",
+    "description": "Stochastic training-time gate; identity in evaluation mode",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "max_pool",
+      "maxpool"
+    ],
+    "role": "pool",
+    "family": "pooling",
+    "description": "Retains dominant local responses",
+    "intervention": true,
+    "feature_axis": "channel"
+  },
+  {
+    "patterns": [
+      "avg_pool",
+      "adaptive_avg_pool",
+      "mean"
+    ],
+    "role": "pool",
+    "family": "pooling",
+    "description": "Aggregates responses by averaging",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "adaptive_max_pool",
+      "amax",
+      "max.dim"
+    ],
+    "role": "pool",
+    "family": "pooling",
+    "description": "Aggregates dominant responses",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "sum",
+      "prod"
+    ],
+    "role": "accumulate",
+    "family": "reduction",
+    "description": "Aggregates evidence over one or more dimensions",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "add",
+      "sub",
+      "rsub"
+    ],
+    "role": "merge",
+    "family": "arithmetic",
+    "description": "Combines or contrasts information streams additively",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "mul",
+      "div",
+      "true_divide",
+      "floor_divide"
+    ],
+    "role": "gate",
+    "family": "arithmetic",
+    "description": "Scales or gates one information stream with another",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "pow",
+      "square",
+      "sqrt",
+      "rsqrt",
+      "exp",
+      "log"
+    ],
+    "role": "transform",
+    "family": "arithmetic",
+    "description": "Element-wise mathematical transformation",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "cat",
+      "concat",
+      "stack",
+      "hstack",
+      "vstack"
+    ],
+    "role": "merge",
+    "family": "merge",
+    "description": "Joins multiple representation streams",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "where",
+      "masked_fill",
+      "masked_scatter",
+      "index_put"
+    ],
+    "role": "route",
+    "family": "conditional",
+    "description": "Conditionally routes or replaces information",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "maximum",
+      "minimum",
+      "clamp",
+      "clip"
+    ],
+    "role": "gate",
+    "family": "conditional",
+    "description": "Bounds or selects competing values",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "eq",
+      "ne",
+      "gt",
+      "ge",
+      "lt",
+      "le"
+    ],
+    "role": "compare",
+    "family": "comparison",
+    "description": "Constructs a comparison or routing predicate",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "scaled_dot_product_attention",
+      "multi_head_attention",
+      "attention"
+    ],
+    "role": "attend",
+    "family": "attention",
+    "description": "Routes value information using query-key compatibility",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "lstm"
+    ],
+    "role": "store",
+    "family": "recurrent",
+    "description": "Updates gated recurrent memory and hidden state",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "gru"
+    ],
+    "role": "store",
+    "family": "recurrent",
+    "description": "Updates gated recurrent hidden state",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "rnn",
+      "recurrent"
+    ],
+    "role": "repeat",
+    "family": "recurrent",
+    "description": "Applies a recurrent state transition",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "cond",
+      "higher_order.cond"
+    ],
+    "role": "route",
+    "family": "control_flow",
+    "description": "Selects one of multiple computational branches",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "while_loop",
+      "higher_order.while_loop",
+      "scan",
+      "associative_scan",
+      "map_impl"
+    ],
+    "role": "repeat",
+    "family": "control_flow",
+    "description": "Executes a repeated or mapped computation",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "flatten",
+      "view",
+      "reshape",
+      "squeeze",
+      "unsqueeze",
+      "permute",
+      "transpose",
+      "movedim",
+      "swapdims",
+      "contiguous",
+      "clone",
+      "alias",
+      "detach",
+      "expand",
+      "repeat",
+      "tile",
+      "as_strided"
+    ],
+    "role": "shape",
+    "family": "shape",
+    "description": "Changes tensor layout or view without introducing a new semantic decision",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "getitem",
+      "select",
+      "slice",
+      "narrow",
+      "index",
+      "gather",
+      "take",
+      "scatter"
+    ],
+    "role": "route",
+    "family": "indexing",
+    "description": "Selects or routes tensor elements",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "split",
+      "chunk",
+      "unbind"
+    ],
+    "role": "route",
+    "family": "indexing",
+    "description": "Splits one representation stream into several outputs",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "argmax",
+      "argmin",
+      "topk",
+      "sort",
+      "argsort"
+    ],
+    "role": "compare",
+    "family": "selection",
+    "description": "Selects dominant or ordered alternatives",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "one_hot"
+    ],
+    "role": "transform",
+    "family": "encoding",
+    "description": "Converts discrete values into an explicit indicator representation",
+    "intervention": true,
+    "feature_axis": "last"
+  },
+  {
+    "patterns": [
+      "interpolate",
+      "upsample",
+      "grid_sampler"
+    ],
+    "role": "transform",
+    "family": "resampling",
+    "description": "Resamples a spatial or sequential representation",
+    "intervention": true,
+    "feature_axis": "channel"
+  },
+  {
+    "patterns": [
+      "fft",
+      "rfft",
+      "stft",
+      "istft"
+    ],
+    "role": "transform",
+    "family": "spectral",
+    "description": "Transforms a signal between time or space and frequency domains",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "quantize",
+      "dequantize",
+      "fake_quantize"
+    ],
+    "role": "transform",
+    "family": "quantisation",
+    "description": "Changes numerical precision or quantisation representation",
+    "intervention": true,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "rand",
+      "randn",
+      "bernoulli",
+      "multinomial",
+      "normal"
+    ],
+    "role": "random",
+    "family": "random",
+    "description": "Introduces stochastic state",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "cross_entropy",
+      "nll_loss",
+      "mse_loss",
+      "binary_cross_entropy"
+    ],
+    "role": "compare",
+    "family": "loss",
+    "description": "Training objective comparing prediction with target",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "sym_size.int",
+      "sym_size"
+    ],
+    "role": "shape",
+    "family": "symbolic_shape",
+    "description": "Reads a symbolic tensor dimension used by the captured execution path",
+    "intervention": false,
+    "feature_axis": "auto"
+  },
+  {
+    "patterns": [
+      "guardsfn",
+      "_guards_fn"
+    ],
+    "role": "route",
+    "family": "shape_guard",
+    "description": "Checks exported shape and execution guards that delimit the validity envelope",
+    "intervention": false,
+    "feature_axis": "auto"
+  }
+]

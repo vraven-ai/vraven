@@ -1,0 +1,13 @@
+[package]
+name = "vraven-core"
+version = "0.10.1"
+edition = "2021"
+description = "Optional CPU acceleration primitives for VRAVEN"
+license = "Apache-2.0"
+
+[lib]
+name = "vraven_core"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+rayon = "1.10"

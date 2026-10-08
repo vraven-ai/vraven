@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="vraven.darkside.discover_decision_circuitry: Find an approximate epsilon-sufficient sparse internal core."><title>vraven.darkside.discover_decision_circuitry · VRAVEN</title>
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="api" data-root=".."><div class="page"><main id="content" class="content guide">
+<a class="backlink" href="index.html">← Python API</a><div class="eyebrow">vraven.darkside · function</div>
+<h1>discover_decision_circuitry</h1><div class="signature"><code>discover_decision_circuitry(model: &#x27;torch.nn.Module&#x27;, inputs: &#x27;Any&#x27;, *, target: &#x27;int | None&#x27;, layer_names: &#x27;Sequence[str] | None&#x27; = None, group_size: &#x27;int&#x27; = 8, relative_score_tolerance: &#x27;float&#x27; = 0.05, absolute_score_tolerance: &#x27;float | None&#x27; = None, baseline: &#x27;str&#x27; = &#x27;zero&#x27;, maximum_groups: &#x27;int&#x27; = 256, config: &#x27;VRavenConfig | None&#x27; = None) -&gt; &#x27;AnalysisResult&#x27;</code></div>
+<section class="api-doc"><p>Find an approximate epsilon-sufficient sparse internal core.</p><p>The candidate universe is formed by contiguous unit groups from the selected<br>layer outputs. The routine first measures each group&#x27;s individual ablation<br>effect, then greedily removes low-effect groups while the target prediction<br>and declared score tolerance are preserved. The result is order-dependent<br>and is not claimed to be the globally minimal circuit.</p></section><h2>Usage</h2><pre><code>from vraven.darkside import discover_decision_circuitry
+
+result = discover_decision_circuitry(... )</code></pre>
+
+<div class="callout"><strong>Source of truth</strong>This page is generated from the checked-out public symbol, signature, and docstring. Pin the package version for reproducible work.</div>
+<div class="next"><a href="index.html">← API index</a><a href="../outputs/index.html">Output guide →</a></div>
+<footer>VRAVEN documentation · Evidence before ornament.</footer></main></div>
+<script src="../assets/app.js"></script></body></html>

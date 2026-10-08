@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-11T18:39:25.294522+00:00",
+  "training_performed": false,
+  "datasets": [
+    {
+      "dataset": "ai4i_predictive_maintenance",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C5HS5C"
+      },
+      "files": [
+        {
+          "path": "ai4i_predictive_maintenance/raw/ai4i2020.csv",
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        },
+        {
+          "path": "ai4i_predictive_maintenance/raw/source.zip",
+          "bytes": 522170,
+          "sha256": "f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252"
+        }
+      ]
+    },
+    {
+      "dataset": "bank_marketing",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/222/bank+marketing.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C5K306"
+      },
+      "files": [
+        {
+          "path": "bank_marketing/raw/__MACOSX/._bank-additional",
+          "bytes": 205,
+          "sha256": "249bc22b44253172df334e15cf23387ee2a0b2f8faaeba560637f889d41b2c00"
+        },
+        {
+          "path": "bank_marketing/raw/__MACOSX/bank-additional/._.DS_Store",
+          "bytes": 82,
+          "sha256": "ba73ce065915631181920868d96cf742163ef205eab9c7e58ce0d9fbe92cdddd"
+        },
+        {
+          "path": "bank_marketing/raw/bank-additional/.DS_Store",
+          "bytes": 6148,
+          "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+        },
+        {
+          "path": "bank_marketing/raw/bank-additional/.Rhistory",
+          "bytes": 3943,
+          "sha256": "dd756f74ad4c737e61cea10e81faeffa653774e148eafea9851ebaf258956eb0"
+        },
+        {
+          "path": "bank_marketing/raw/bank-additional/bank-additional-full.csv",
+          "bytes": 5834924,
+          "sha256": "74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8"
+        },
+        {
+          "path": "bank_marketing/raw/bank-additional/bank-additional-names.txt",
+          "bytes": 5458,
+          "sha256": "10045462a4c026f858dffa159370c4270510230c1fc63c6c91ca51bba4b3df26"
+        },
+        {
+          "path": "bank_marketing/raw/bank-additional/bank-additional.csv",
+          "bytes": 583898,
+          "sha256": "7e59cf650004d65d1c9d6b08553bad2ee9a9ad70d594f536e3c584ee6ed5df50"
+        },
+        {
+          "path": "bank_marketing/raw/bank-additional.zip",
+          "bytes": 444572,
+          "sha256": "a607b5edab6c6c75ce09c39142a77702c38123bd5aa7ae89a63503bbe17d65cd"
+        },
+        {
+          "path": "bank_marketing/raw/bank-full.csv",
+          "bytes": 4610348,
+          "sha256": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d"
+        },
+        {
+          "path": "bank_marketing/raw/bank-names.txt",
+          "bytes": 3864,
+          "sha256": "3899a77082573ed676a7dfce3765a5307915c7f11b1fe2f6f55fd3c5467c12f7"
+        },
+        {
+          "path": "bank_marketing/raw/bank.csv",
+          "bytes": 461474,
+          "sha256": "dc8d576e9bda0f41ee891251bd84bab9a39ce576cba715aac08adc2374a01fde"
+        },
+        {
+          "path": "bank_marketing/raw/bank.zip",
+          "bytes": 579043,
+          "sha256": "99d7e8eb12401ed278b793984423915411ea8df099e1795f9fefe254f513fe5e"
+        },
+        {
+          "path": "bank_marketing/raw/source.zip",
+          "bytes": 1023843,
+          "sha256": "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4"
+        }
+      ]
+    },
+    {
+      "dataset": "dry_bean",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/602/dry+bean+dataset.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C50S4B"
+      },
+      "files": [
+        {
+          "path": "dry_bean/raw/DryBeanDataset/Dry_Bean_Dataset.arff",
+          "bytes": 3813205,
+          "sha256": "b2a4a76a2aedfb8ed415adfc1bfc70b5f202cb00cb72e500766e364c14834014"
+        },
+        {
+          "path": "dry_bean/raw/DryBeanDataset/Dry_Bean_Dataset.txt",
+          "bytes": 3339,
+          "sha256": "20413356adbeda9da589738cceb9387787970d8cfb41049f3b48c960c05b274d"
+        },
+        {
+          "path": "dry_bean/raw/DryBeanDataset/Dry_Bean_Dataset.xlsx",
+          "bytes": 3043341,
+          "sha256": "a9efa69741c6c5d95167c962a13da23a456f7e940402a5add12639790e01f714"
+        },
+        {
+          "path": "dry_bean/raw/source.zip",
+          "bytes": 4738776,
+          "sha256": "0a64eff5be87f48c3dbbfc0a12a56c5d5b5167ef8e61cd45d69b3e7c7130c06f"
+        }
+      ]
+    },
+    {
+      "dataset": "eeg_eye_state",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/264/eeg+eye+state.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C57G7J"
+      },
+      "files": [
+        {
+          "path": "eeg_eye_state/raw/EEG Eye State.arff",
+          "bytes": 1696428,
+          "sha256": "e6eccba033d8ce56d38d2f0cca2087356705425a5a2ddbb1012ef3b892bd5a4b"
+        },
+        {
+          "path": "eeg_eye_state/raw/source.zip",
+          "bytes": 1696562,
+          "sha256": "49e7cbd14d303d63e772c7fcffa6b063bc52b97a7fa01b1135a9907b7715f415"
+        }
+      ]
+    },
+    {
+      "dataset": "fashion_mnist",
+      "provenance": {
+        "source_type": "official_direct_files",
+        "source": "https://github.com/zalandoresearch/fashion-mnist",
+        "licence": "MIT",
+        "citation": "arXiv:1708.07747"
+      },
+      "files": [
+        {
+          "path": "fashion_mnist/raw/t10k-images-idx3-ubyte.gz",
+          "bytes": 4422102,
+          "sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073"
+        },
+        {
+          "path": "fashion_mnist/raw/t10k-labels-idx1-ubyte.gz",
+          "bytes": 5148,
+          "sha256": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5"
+        },
+        {
+          "path": "fashion_mnist/raw/train-images-idx3-ubyte.gz",
+          "bytes": 26421880,
+          "sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84"
+        },
+        {
+          "path": "fashion_mnist/raw/train-labels-idx1-ubyte.gz",
+          "bytes": 29515,
+          "sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845"
+        }
+      ]
+    },
+    {
+      "dataset": "kronodroid",
+      "provenance": {
+        "source_type": "existing_local_file",
+        "source": "KR/kronodroid_combined.csv",
+        "article_doi": "10.1016/j.cose.2021.102399",
+        "redistribution_licence": "unverified_for_this_combined_file"
+      },
+      "files": [
+        {
+          "path": "kronodroid/raw/kronodroid_combined.csv",
+          "bytes": 87957264,
+          "sha256": "29579a66eda59e7d989310ee2b3758302ec1007f5856bc4e2e756bba65f6c31a"
+        }
+      ]
+    },
+    {
+      "dataset": "sms_spam",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/228/sms+spam+collection.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C5CC84"
+      },
+      "files": [
+        {
+          "path": "sms_spam/raw/SMSSpamCollection",
+          "bytes": 477907,
+          "sha256": "7d039a24a6083ed9ef0f806ebad56bbb976e3aeb8de05669173bfdc4996c239d"
+        },
+        {
+          "path": "sms_spam/raw/readme",
+          "bytes": 5868,
+          "sha256": "8753cd2d3cab68f80c8257851b8c2037778c267f55accb6fd1b5a2e32d36a84e"
+        },
+        {
+          "path": "sms_spam/raw/source.zip",
+          "bytes": 203415,
+          "sha256": "1587ea43e58e82b14ff1f5425c88e17f8496bfcdb67a583dbff9eefaf9963ce3"
+        }
+      ]
+    },
+    {
+      "dataset": "uci_har",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C54S4K"
+      },
+      "files": [
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/.DS_Store",
+          "bytes": 6148,
+          "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/README.txt",
+          "bytes": 6304,
+          "sha256": "eaee53f45825f349681a1a1b92a997a0082648f9b5bf93ddb3290caeede4b3a8"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/activity_labels.txt",
+          "bytes": 80,
+          "sha256": "f6e6b292704438261f0283b2a82659ab0661447dc16520938bdf379ed1bf8de0"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/features.txt",
+          "bytes": 15785,
+          "sha256": "b384889885b1c8680ecf250e0e605b4c79536cdf09ce9f2fa7225a3c6773b5c7"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/features_info.txt",
+          "bytes": 2809,
+          "sha256": "5d7e7d1f204dcfba846043029ef7a15a07c2b3711ee0a122da031f5971b3b585"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/body_acc_x_test.txt",
+          "bytes": 6041350,
+          "sha256": "c07eb8ee8c76eafcd94b42111082700e10f4956b769fbbb0d5413c14f38774fa"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/body_acc_y_test.txt",
+          "bytes": 6041350,
+          "sha256": "0ed0057b41f6870b16a6953ef17f6d42bc5542fa304319fb6b7f424dd3380f0b"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/body_acc_z_test.txt",
+          "bytes": 6041350,
+          "sha256": "a2b58317137533bdbf2342bf301ae854c15b1168259cc7b582c2dd131e3d81d5"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/body_gyro_x_test.txt",
+          "bytes": 6041350,
+          "sha256": "fb4f27f13e4e08055043f34ed52f6d8bbe8ebce7dff9475ff92be03b3d3f607c"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/body_gyro_y_test.txt",
+          "bytes": 6041350,
+          "sha256": "d2501166b2b1f645b51f722fcf31f3aa1e9a3edae18d49322612f37b4495cb80"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/body_gyro_z_test.txt",
+          "bytes": 6041350,
+          "sha256": "90a18ce534be0dfc616cefdac9874e2ea599ae20421cd161361c2a33f40cfa5e"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/total_acc_x_test.txt",
+          "bytes": 6041350,
+          "sha256": "ea71c339c828561bc1dc6f7301a54aeb7e61e6312cb2387ebaea832ffd04203d"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/total_acc_y_test.txt",
+          "bytes": 6041350,
+          "sha256": "32692c617b40c16e020bf059a316bd6bf3a63d771f030dfc5fa4003f390b6f67"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/Inertial Signals/total_acc_z_test.txt",
+          "bytes": 6041350,
+          "sha256": "622ddf1d9532fbe340472074ef1edd1a2f58aa332682542bb36a8c03c9ba9e04"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/X_test.txt",
+          "bytes": 26458166,
+          "sha256": "99035209add50d17650e847d8a4658d784a5707466ebb7c2deb97c28e5250a78"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/subject_test.txt",
+          "bytes": 7934,
+          "sha256": "63b8c577f4a85431c06bd87f6384608c90a9f72f05c7956dd21255dc63515c07"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/test/y_test.txt",
+          "bytes": 5894,
+          "sha256": "2a94cb53ca46b956c1b2aebd4a09a72badd8a8e9ea9cdfe9f31b3306a08666bb"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/body_acc_x_train.txt",
+          "bytes": 15071600,
+          "sha256": "89f7bf5e360384804439d00f463dd2f717c452c683cac6c0a09b1a191d8ce4a2"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/body_acc_y_train.txt",
+          "bytes": 15071600,
+          "sha256": "4775a586a5a1acc6706edee08c685835daea7bc1d9274e7e7e8d660fea173944"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/body_acc_z_train.txt",
+          "bytes": 15071600,
+          "sha256": "9155718981ff1331dcd2d30aee545905ffba71af9ece5a08d6dfdeeb7d2ec4fb"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/body_gyro_x_train.txt",
+          "bytes": 15071600,
+          "sha256": "423f6806f09059de3c1f443cf1d04a3c3907dc7ee17b5d296ed775b07aa6cde6"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/body_gyro_y_train.txt",
+          "bytes": 15071600,
+          "sha256": "42419d8aaefd1a319561998defb167bfa57f7e51d656b6012d5a59c0b10f5260"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/body_gyro_z_train.txt",
+          "bytes": 15071600,
+          "sha256": "05bc629faee918b0f5b99cd2e68f860c785889627ec8efeb85c29282f3963988"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/total_acc_x_train.txt",
+          "bytes": 15071600,
+          "sha256": "41a7fe1da7b529cc6c2c3d7df97c98752bea74d7a142673dd59c7820fad3b5e6"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/total_acc_y_train.txt",
+          "bytes": 15071600,
+          "sha256": "03bd3a80c0c04bf354597ad62920158b4b6605e157d856a1aab9abb357d40c5d"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/Inertial Signals/total_acc_z_train.txt",
+          "bytes": 15071600,
+          "sha256": "5be3b593f88d49bb8f740c1c41379fc928ea8608d706594ebbba81cd800a5a33"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/X_train.txt",
+          "bytes": 66006256,
+          "sha256": "9c1246099c8d5463779eec5a3845cc3898df9d8c715441ab2a1232d4421fc42f"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/subject_train.txt",
+          "bytes": 20152,
+          "sha256": "66e1e2fbe9b396fa5155f531dc3348c803f503be663e2318772d49947db9153a"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset/train/y_train.txt",
+          "bytes": 14704,
+          "sha256": "415b3357e2e2d5e70a45c781947c6bdd80e0410a579d862eedcd6bbce3c694ef"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset.names",
+          "bytes": 6304,
+          "sha256": "eaee53f45825f349681a1a1b92a997a0082648f9b5bf93ddb3290caeede4b3a8"
+        },
+        {
+          "path": "uci_har/raw/UCI HAR Dataset.zip",
+          "bytes": 60999314,
+          "sha256": "2045e435c955214b38145fb5fa00776c72814f01b203fec405152dac7d5bfeb0"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/._UCI HAR Dataset",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/._.DS_Store",
+          "bytes": 120,
+          "sha256": "74694443e1068dda8cb89e61b380ea27bcf410293bb68b4680e9d1253da73d4d"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/._README.txt",
+          "bytes": 605,
+          "sha256": "fffe033828029a3bff1048bfb5b1cd4de4db5fec837de346ba4b203b0665d476"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/._activity_labels.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/._features.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/._features_info.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/._test",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/._train",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/._Inertial Signals",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/._X_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/._subject_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/._y_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_acc_x_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_acc_y_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_acc_z_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_gyro_x_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_gyro_y_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._body_gyro_z_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._total_acc_x_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._total_acc_y_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/test/Inertial Signals/._total_acc_z_test.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/._Inertial Signals",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/._X_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/._subject_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/._y_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_acc_x_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_acc_y_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_acc_z_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_gyro_x_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_gyro_y_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._body_gyro_z_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._total_acc_x_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._total_acc_y_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/__MACOSX/UCI HAR Dataset/train/Inertial Signals/._total_acc_z_train.txt",
+          "bytes": 226,
+          "sha256": "7f60b374cf6d8f4e3816767a6c1c0c343eb7019becd99b2362877f304cf73988"
+        },
+        {
+          "path": "uci_har/raw/source.zip",
+          "bytes": 61005872,
+          "sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031"
+        }
+      ]
+    },
+    {
+      "dataset": "wdbc",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/17/breast+cancer+wisconsin+diagnostic.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C5DW2B"
+      },
+      "files": [
+        {
+          "path": "wdbc/raw/source.zip",
+          "bytes": 51284,
+          "sha256": "bc154869ef13f753f9e2b5a17e248cfe1ba4b6721db7c4da9f4880e40b05d3af"
+        },
+        {
+          "path": "wdbc/raw/wdbc.data",
+          "bytes": 124103,
+          "sha256": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a"
+        },
+        {
+          "path": "wdbc/raw/wdbc.names",
+          "bytes": 4708,
+          "sha256": "840e04e3f20f8a5b326892f3b9cbc01c4cd6f7e6c597630b701ef6c0ac79f5ef"
+        }
+      ]
+    },
+    {
+      "dataset": "wine_quality",
+      "provenance": {
+        "source_type": "official_uci_archive",
+        "source": "https://archive.ics.uci.edu/static/public/186/wine+quality.zip",
+        "licence": "CC BY 4.0",
+        "doi": "10.24432/C56S3T"
+      },
+      "files": [
+        {
+          "path": "wine_quality/raw/source.zip",
+          "bytes": 91353,
+          "sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4"
+        },
+        {
+          "path": "wine_quality/raw/winequality-red.csv",
+          "bytes": 84199,
+          "sha256": "4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e"
+        },
+        {
+          "path": "wine_quality/raw/winequality-white.csv",
+          "bytes": 264426,
+          "sha256": "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"
+        },
+        {
+          "path": "wine_quality/raw/winequality.names",
+          "bytes": 3305,
+          "sha256": "15d215e73b39105952380fd487e4ce1bf5a6b83a425abb285c2ec55193d3ca92"
+        }
+      ]
+    }
+  ]
+}

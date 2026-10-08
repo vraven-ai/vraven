@@ -1,0 +1,23 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Find a bounded model counterfactual with VRAVEN."><title>Counterfactual search · VRAVEN</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="counterfactual" data-root=".."><div class="page"><main id="content" class="content narrow guide">
+  <div class="eyebrow">Guide 05 · Counterfactual</div><h1>Ask what bounded change reaches another class.</h1><p class="lede">Select the destination class and constrain the search so the result answers a precise question.</p>
+  <h2>Run the search</h2><pre><code>vraven counterfactual model.pt \
+  --model-format state_dict \
+  --factory my_project.models:Classifier \
+  --input input.npy \
+  --sample-index 0 \
+  --target-class 2 \
+  --steps 200 \
+  --max-linf 0.05 \
+  --clamp-min 0 \
+  --clamp-max 1 \
+  --output counterfactual.json</code></pre>
+  <h2>Read the result</h2><p>Check whether the target class was reached, the final perturbation size, the score change and the largest changed input coordinates. A failed bounded search means no candidate was found by this procedure—not that none exists.</p>
+  <h2>Use the correct validity claim</h2><div class="callout"><strong>Model validity is not domain validity.</strong>A candidate can change the model prediction while being impossible or inappropriate in the real domain. Apply a domain validator before calling it realistic.</div>
+  <p>For the simpler bundle workflow:</p><pre><code>vraven analyse ./my-model \
+  --task counterfactual \
+  --target-class 2 \
+  --preset thorough \
+  --output counterfactual.json</code></pre>
+  <nav class="next"><a href="adversarial.html">← Adversarial</a><a href="reports.html">Next: report formats →</a></nav>
+</main></div><script src="../assets/app.js"></script></body></html>

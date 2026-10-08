@@ -1,0 +1,23 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explain one PyTorch model decision with VRAVEN."><title>Explain one decision · VRAVEN</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="explain" data-root=".."><div class="page"><main id="content" class="content narrow guide">
+  <div class="eyebrow">Guide 03 · Explanation</div><h1>Explain one model decision.</h1><p class="lede">Start with the beginner command. Choose a deeper mode only when the question requires it.</p>
+  <h2>Recommended: use a bundle</h2><pre><code>vraven analyse ./my-model \
+  --task explain \
+  --preset standard \
+  --target 1 \
+  --format html \
+  --output explanation.html</code></pre>
+  <p>Presets control depth: <code>quick</code> favours speed, <code>standard</code> is the default balance, and <code>thorough</code> collects more evidence.</p>
+  <h2>Or load a state dictionary directly</h2><pre><code>vraven explain model.pt \
+  --model-format state_dict \
+  --factory my_project.models:Classifier \
+  --input input.npy \
+  --target 1 \
+  --mode gradient \
+  --report-format html \
+  --output explanation.html</code></pre>
+  <h2>Choose the evidence mode</h2>
+  <table class="command-table"><thead><tr><th>Mode</th><th>Use it when</th></tr></thead><tbody><tr><td>fast</td><td>You need reduced activation evidence with low overhead.</td></tr><tr><td>gradient</td><td>You need target-sensitive gradients and input attribution.</td></tr><tr><td>causal</td><td>You need limited controlled intervention evidence. It is slower.</td></tr></tbody></table>
+  <div class="callout"><strong>Interpret carefully</strong>Activation or gradient magnitude is observational evidence. VRAVEN labels causal claims only when they are supported by an intervention.</div>
+  <nav class="next"><a href="model-folder.html">← Model folder</a><a href="adversarial.html">Next: adversarial testing →</a></nav>
+</main></div><script src="../assets/app.js"></script></body></html>

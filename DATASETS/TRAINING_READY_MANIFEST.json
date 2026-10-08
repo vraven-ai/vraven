@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-11T19:24:35.652883+00:00",
+  "format_conversion_only": true,
+  "preprocessing_fitted": false,
+  "feature_selection_performed": false,
+  "training_performed": false,
+  "datasets": [
+    {
+      "files": [
+        {
+          "path": "kronodroid/training_ready/kronodroid_combined.csv",
+          "bytes": 87957264,
+          "sha256": "29579a66eda59e7d989310ee2b3758302ec1007f5856bc4e2e756bba65f6c31a"
+        }
+      ],
+      "format": "CSV",
+      "target": "Malware",
+      "exclude_from_binary_inputs": [
+        "Package",
+        "sha256",
+        "MalFamily"
+      ],
+      "protocol_warning": "Audit Detection_Ratio and Scanners for collection-time label leakage; use chronological splits for temporal claims.",
+      "dataset": "kronodroid"
+    },
+    {
+      "files": [
+        {
+          "path": "fashion_mnist/training_ready/fashion_mnist.npz",
+          "bytes": 30869925,
+          "sha256": "394f85be1d5d2d57885191af5db930d5d61b9963c16bfa912c0298cd293cb166"
+        }
+      ],
+      "format": "NPZ: uint8 image tensors and integer labels",
+      "target": "y_train/y_test",
+      "shapes": {
+        "x_train": [
+          60000,
+          28,
+          28
+        ],
+        "y_train": [
+          60000
+        ],
+        "x_test": [
+          10000,
+          28,
+          28
+        ],
+        "y_test": [
+          10000
+        ]
+      },
+      "recommended_models": [
+        "CNN",
+        "ViT",
+        "MLP"
+      ],
+      "dataset": "fashion_mnist"
+    },
+    {
+      "files": [
+        {
+          "path": "uci_har/training_ready/uci_har_features.npz",
+          "bytes": 19169663,
+          "sha256": "59a3998b596147fb62fe78d5c93e0451bafc36e20afd82d45735ae7a1539c623"
+        },
+        {
+          "path": "uci_har/training_ready/uci_har_inertial_signals.npz",
+          "bytes": 24298119,
+          "sha256": "874f2cd82fd1b95a29faf0552325ceafbdcd32889eb2c41b7fb9d6ae515f4ed7"
+        }
+      ],
+      "format": "NPZ: engineered features and 128-step \u00d7 9-channel sequences",
+      "target": "y_train/y_test (converted from 1\u20136 to 0\u20135)",
+      "shapes": {
+        "features_train": [
+          7352,
+          561
+        ],
+        "features_test": [
+          2947,
+          561
+        ],
+        "signals_train": [
+          7352,
+          128,
+          9
+        ],
+        "signals_test": [
+          2947,
+          128,
+          9
+        ]
+      },
+      "split_rule": "Preserve official subject-disjoint train/test split.",
+      "recommended_models": [
+        "MLP",
+        "1-D CNN",
+        "GRU",
+        "Transformer"
+      ],
+      "dataset": "uci_har"
+    },
+    {
+      "files": [
+        {
+          "path": "sms_spam/training_ready/sms_spam.csv",
+          "bytes": 481087,
+          "sha256": "f6605cf7f69b9cb2f9518355fe104be11b6c6ac0c01fb0200caa6821fd7f945d"
+        }
+      ],
+      "format": "CSV UTF-8",
+      "target": "label",
+      "shape": [
+        5574,
+        2
+      ],
+      "recommended_models": [
+        "Text CNN",
+        "GRU",
+        "compact Transformer"
+      ],
+      "dataset": "sms_spam"
+    },
+    {
+      "files": [
+        {
+          "path": "wdbc/training_ready/wdbc.csv",
+          "bytes": 125575,
+          "sha256": "fede67cdc64a1734014a2ad832645c3f1b4d2f43a147f84b7e95f087f75f6cc5"
+        }
+      ],
+      "format": "CSV",
+      "target": "diagnosis",
+      "excluded_inputs": [
+        "id"
+      ],
+      "shape": [
+        569,
+        32
+      ],
+      "recommended_models": [
+        "MLP",
+        "residual MLP",
+        "tabular Transformer"
+      ],
+      "dataset": "wdbc"
+    },
+    {
+      "files": [
+        {
+          "path": "eeg_eye_state/training_ready/eeg_eye_state.csv",
+          "bytes": 1691721,
+          "sha256": "b8f42456e5c0c3b7d9744fd9e1fbae3aa542eaaf3eec7b3ebd5abdb89da1a7b8"
+        }
+      ],
+      "format": "CSV in original chronological order",
+      "target": "eyeDetection",
+      "shape": [
+        14980,
+        15
+      ],
+      "split_rule": "Use blocked chronological evaluation; never random-row leakage.",
+      "recommended_models": [
+        "1-D CNN",
+        "GRU",
+        "Transformer"
+      ],
+      "dataset": "eeg_eye_state"
+    },
+    {
+      "files": [
+        {
+          "path": "ai4i_predictive_maintenance/training_ready/ai4i2020.csv",
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        }
+      ],
+      "format": "CSV",
+      "target": "Machine failure",
+      "excluded_inputs": [
+        "UDI",
+        "Product ID",
+        "TWF",
+        "HDF",
+        "PWF",
+        "OSF",
+        "RNF"
+      ],
+      "protocol_warning": "Failure-mode indicator columns would leak the aggregate target.",
+      "recommended_models": [
+        "MLP",
+        "residual MLP",
+        "tabular Transformer"
+      ],
+      "dataset": "ai4i_predictive_maintenance"
+    },
+    {
+      "files": [
+        {
+          "path": "dry_bean/training_ready/dry_bean.csv",
+          "bytes": 3814125,
+          "sha256": "a427b53eafd5bf50af0798873311f2103c46d0576371dae8fa6c4853480bf3ca"
+        }
+      ],
+      "format": "CSV",
+      "target": "Class",
+      "shape": [
+        13611,
+        17
+      ],
+      "recommended_models": [
+        "MLP",
+        "residual MLP",
+        "tabular Transformer"
+      ],
+      "dataset": "dry_bean"
+    },
+    {
+      "files": [
+        {
+          "path": "bank_marketing/training_ready/bank_marketing.csv",
+          "bytes": 4912041,
+          "sha256": "5797716d254c8259177486baf6b0695df48c2fa8e33bda4c40c2fbf5cf34e475"
+        }
+      ],
+      "format": "CSV; canonical bank-additional-full variant",
+      "target": "y",
+      "excluded_inputs": [
+        "duration"
+      ],
+      "shape": [
+        41188,
+        21
+      ],
+      "protocol_warning": "Call duration is unavailable before the outcome and must be excluded.",
+      "recommended_models": [
+        "embedding MLP",
+        "residual MLP",
+        "tabular Transformer"
+      ],
+      "dataset": "bank_marketing"
+    },
+    {
+      "files": [
+        {
+          "path": "wine_quality/training_ready/wine_quality.csv",
+          "bytes": 415035,
+          "sha256": "89d786260f08cb04f0795fa75e467756638ddceb79d5ebeb0915f9f60c5e9cf2"
+        }
+      ],
+      "format": "CSV; red and white subsets combined with wine_type",
+      "target": "quality",
+      "shape": [
+        6497,
+        13
+      ],
+      "protocol_warning": "Pre-register ordinal or multiclass target handling before training.",
+      "recommended_models": [
+        "ordinal MLP",
+        "residual MLP",
+        "tabular Transformer"
+      ],
+      "dataset": "wine_quality"
+    }
+  ]
+}

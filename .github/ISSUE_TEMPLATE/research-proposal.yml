@@ -1,0 +1,45 @@
+name: Research method proposal
+description: Propose a new analysis, metric, visual or model-family integration.
+title: "[Research]: "
+labels:
+  - research
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: State the precise scientific or engineering question this proposal addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed method
+      description: Describe inputs, outputs, assumptions and the evidence level of the result.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: Explain the numerical tests, baselines, ablations or counterexamples that would validate the method.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Research basis
+      description: Link primary papers, implementations or benchmarks and explain how the proposal differs.
+  - type: textarea
+    id: api
+    attributes:
+      label: User-facing API
+      description: Show a compact example of how a researcher would invoke and interpret the feature.
+      render: python
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Known limitations and risks
+      description: Identify unsupported claims, validity threats, computational cost and likely failure cases.
+    validations:
+      required: true
