@@ -1,7 +1,7 @@
 # VRAVEN
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vraven-ai/vraven/main/assets/branding/avatars/vraven-avatar-256.png" alt="VRAVEN raven signature" width="190">
+  <img src="assets/branding/avatars/vraven-avatar-256.png" alt="VRAVEN raven signature" width="190">
 </p>
 
 <p align="center">
@@ -140,7 +140,7 @@ programme recovery, counterfactual testing and evidence certification in one
 traceable workflow.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vraven-ai/vraven/main/docs/assets/vraven-methodology.png" alt="VRAVEN methodology from model capture to evidence certification" width="100%">
+  <img src="docs/assets/vraven-methodology.png" alt="VRAVEN methodology from model capture to evidence certification" width="100%">
 </p>
 
 The workflow is not a claim that every analysis completes every stage. Reports
