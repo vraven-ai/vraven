@@ -196,6 +196,7 @@ footer { margin-top: 70px; color: #727887; font-size: .8rem; }
 .case-hero figure img { display: block; width: 100%; height: 320px; object-fit: cover; }
 .case-hero figcaption { padding: 10px 14px; color: var(--muted); font-size: .72rem; }
 .walk-step { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 22px; margin: 0; padding: 45px 0; border-top: 1px solid var(--line); }
+.walk-step > div { min-width: 0; }
 .step-no { position: sticky; top: 82px; align-self: start; display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid rgba(0,212,255,.42); border-radius: 14px; color: var(--teal); background: rgba(0,212,255,.08); font: 850 .78rem/1 ui-monospace, monospace; }
 .walk-step h2 { margin: .5rem 0 1rem; }
 .walk-step details { margin: 20px 0; padding: 14px 17px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
@@ -206,7 +207,10 @@ footer { margin-top: 70px; color: #727887; font-size: .8rem; }
 .rank-list i::before { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--score); border-radius: inherit; background: linear-gradient(90deg, var(--blue), var(--teal)); }
 .rank-list strong { color: white; text-align: right; }
 .result-figure { margin: 26px 0 0; overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #030a12; }
-.result-figure img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left; }
+.diagram-viewport { display: block; overflow: hidden; aspect-ratio: 1098 / 648; background: #030a12; }
+.diagram-viewport img { display: block; width: 100%; height: auto; max-width: none; }
+.diagram-viewport.export-crop { aspect-ratio: 1108 / 658; }
+.diagram-viewport.export-crop img { width: 115.53%; }
 .result-figure figcaption { display: flex; align-items: center; gap: 10px; padding: 13px 16px; color: var(--muted); font-size: .78rem; background: var(--panel); }
 .license-note { display: flex; align-items: center; gap: 18px; margin-top: 32px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
 .license-note img { flex: 0 0 auto; width: 66px; height: 66px; border-radius: 15px; }
