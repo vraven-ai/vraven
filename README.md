@@ -43,15 +43,15 @@ as proof by itself.
 
 ## Why researchers choose VRAVEN
 
-- **Evidence levels are explicit.** Observational, interventional, empirical and
+- **Evidence levels are explicit:** Observational, interventional, empirical and
   formal results are labelled rather than blended into one confidence claim.
-- **One model supports many research questions.** Inspect single predictions,
+- **One model supports many research questions:** Inspect single predictions,
   cohorts, adversarial behaviour, counterfactuals, checkpoints and matched models.
-- **Results are reproducible.** Reports retain configuration, model and target
+- **Results are reproducible:** Reports retain configuration, model and target
   context, evidence coverage, limitations and machine-readable outputs.
-- **Methods are inspectable and extensible.** The Python API, Mechanism IR and
+- **Methods are inspectable and extensible:** The Python API, Mechanism IR and
   focused analysis components support new experiments without hiding the protocol.
-- **Models and traces remain local.** VRAVEN adds no telemetry or remote upload.
+- **Models and traces remain local:** VRAVEN adds no telemetry or remote upload.
 
 ## Install
 
