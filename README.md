@@ -34,7 +34,7 @@ report what the analysis did—and did not—cover. It keeps observational evide
 separate from causal evidence and does not present an attractive visualisation
 as proof by itself.
 
-> **Built on published research in neural-network explanation since 2010.**
+> **Built on published research in neural-network explanation since 2010**
 > VRAVEN brings together selected ideas from published work on local decision
 > explanation, attribution, concept testing, faithfulness evaluation, causal
 > abstraction, mechanistic interpretability and programme extraction. This
