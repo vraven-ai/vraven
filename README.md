@@ -34,12 +34,13 @@ report what the analysis did—and did not—cover. It keeps observational evide
 separate from causal evidence and does not present an attractive visualisation
 as proof by itself.
 
-> **More than fifteen years of research, brought into one product.** VRAVEN
-> synthesises ideas developed across modern neural-network explanation from
-> 2010 to the present: local decision explanation, attribution, concept testing,
-> faithfulness evaluation, causal abstraction, mechanistic interpretability and
-> programme extraction. The original innovations remain the work of their
-> authors; VRAVEN connects compatible ideas into one testable workflow.
+> **Built on published research in neural-network explanation since 2010.**
+> VRAVEN brings together selected ideas from published work on local decision
+> explanation, attribution, concept testing, faithfulness evaluation, causal
+> abstraction, mechanistic interpretability and programme extraction. This
+> research informed VRAVEN's development; the original methods remain the work
+> of their respective authors. VRAVEN's contribution is the integration of
+> compatible ideas into a reproducible, testable model-auditing workflow.
 
 ## Why researchers choose VRAVEN
 
